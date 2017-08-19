@@ -1,0 +1,74 @@
+ERROR - 2017-07-27 09:46:57 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-27 09:46:59 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-27 09:47:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:47:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:47:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:51:58 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 175
+ERROR - 2017-07-27 09:53:08 --> Severity: Notice --> Undefined variable: id F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Usermanage.php 129
+ERROR - 2017-07-27 09:53:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and state = '1'' at line 1 - Invalid query: update user set tobeoffline = '1' where cid = ? and state = '1'
+ERROR - 2017-07-27 09:53:10 --> Severity: Notice --> Undefined variable: id F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Usermanage.php 129
+ERROR - 2017-07-27 09:53:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and state = '1'' at line 1 - Invalid query: update user set tobeoffline = '1' where cid = ? and state = '1'
+ERROR - 2017-07-27 09:53:10 --> Severity: Notice --> Undefined variable: id F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Usermanage.php 129
+ERROR - 2017-07-27 09:53:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and state = '1'' at line 1 - Invalid query: update user set tobeoffline = '1' where cid = ? and state = '1'
+ERROR - 2017-07-27 09:53:10 --> Severity: Notice --> Undefined variable: id F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Usermanage.php 129
+ERROR - 2017-07-27 09:53:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and state = '1'' at line 1 - Invalid query: update user set tobeoffline = '1' where cid = ? and state = '1'
+ERROR - 2017-07-27 09:53:22 --> Severity: Notice --> Undefined variable: id F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Usermanage.php 129
+ERROR - 2017-07-27 09:53:22 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and state = '1'' at line 1 - Invalid query: update user set tobeoffline = '1' where cid = ? and state = '1'
+ERROR - 2017-07-27 09:55:03 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:55:03 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:55:03 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:55:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:55:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 09:55:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:31:55 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:31:55 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:31:55 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:32:13 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:32:13 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:32:13 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:32:18 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:32:18 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:32:18 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:32:32 --> 404 Page Not Found: Adc/index
+ERROR - 2017-07-27 11:33:10 --> 404 Page Not Found: Adc/index
+ERROR - 2017-07-27 11:34:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:34:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 11:34:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:30:00 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-27 13:30:04 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-27 13:36:38 --> Severity: Notice --> Undefined variable: wx F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 13:42:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:42:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:42:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:43:22 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:43:22 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:43:22 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:44:46 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 13:45:44 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:45:44 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:45:44 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:45:51 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:45:51 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:45:51 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:46:01 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:46:01 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:46:01 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:48:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:48:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:48:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:48:12 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 13:50:47 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 13:53:09 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:53:09 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:53:09 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 13:54:21 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 13:54:21 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 14:13:00 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 15:19:36 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 15:19:36 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 15:19:36 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-27 15:39:37 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-27 15:39:41 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-27 15:47:26 --> 404 Page Not Found: Adc/index
+ERROR - 2017-07-27 16:18:30 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Splash_mo.php 174
+ERROR - 2017-07-27 16:55:40 --> 404 Page Not Found: Faviconico/index

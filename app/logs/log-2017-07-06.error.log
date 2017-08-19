@@ -1,0 +1,274 @@
+ERROR - 2017-07-06 09:32:46 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 09:32:47 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-06 10:34:55 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 10:34:58 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-06 10:40:01 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-06 10:40:01 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-06 10:40:37 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-06 10:40:37 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-06 11:11:50 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:14:29 --> 404 Page Not Found: cooperater/Corp/blackedit
+ERROR - 2017-07-06 11:16:32 --> Severity: Notice --> Undefined variable: id F:\PHP\Code\workspace\Portal2.0\gui\editblackitem.php 15
+ERROR - 2017-07-06 11:25:10 --> Severity: Notice --> Undefined index: apid F:\PHP\Code\workspace\Portal2.0\gui\editblackitem.php 39
+ERROR - 2017-07-06 11:25:10 --> Severity: Notice --> Undefined index: apid F:\PHP\Code\workspace\Portal2.0\gui\editblackitem.php 39
+ERROR - 2017-07-06 11:25:24 --> Severity: Notice --> Undefined index: apid F:\PHP\Code\workspace\Portal2.0\gui\editblackitem.php 39
+ERROR - 2017-07-06 11:25:24 --> Severity: Notice --> Undefined index: apid F:\PHP\Code\workspace\Portal2.0\gui\editblackitem.php 39
+ERROR - 2017-07-06 11:25:36 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:26:11 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:26:31 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:34:40 --> Severity: Notice --> Undefined variable: ap F:\PHP\Code\workspace\Portal2.0\gui\addwhiteitem.php 33
+ERROR - 2017-07-06 11:34:40 --> Severity: Warning --> Invalid argument supplied for foreach() F:\PHP\Code\workspace\Portal2.0\gui\addwhiteitem.php 33
+ERROR - 2017-07-06 11:35:21 --> Severity: Notice --> Undefined variable: ap F:\PHP\Code\workspace\Portal2.0\gui\addwhiteitem.php 33
+ERROR - 2017-07-06 11:35:21 --> Severity: Warning --> Invalid argument supplied for foreach() F:\PHP\Code\workspace\Portal2.0\gui\addwhiteitem.php 33
+ERROR - 2017-07-06 11:35:28 --> Severity: Notice --> Undefined variable: ap F:\PHP\Code\workspace\Portal2.0\gui\addwhiteitem.php 33
+ERROR - 2017-07-06 11:35:28 --> Severity: Warning --> Invalid argument supplied for foreach() F:\PHP\Code\workspace\Portal2.0\gui\addwhiteitem.php 33
+ERROR - 2017-07-06 11:43:12 --> Severity: Notice --> Undefined variable: remark F:\PHP\Code\workspace\Portal2.0\gui\editwhiteitem.php 53
+ERROR - 2017-07-06 11:56:01 --> 404 Page Not Found: Res/corplogo
+ERROR - 2017-07-06 11:56:24 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:57:00 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:57:09 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:57:22 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:58:12 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:58:21 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:58:53 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:59:15 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:59:17 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:59:27 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 11:59:30 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 12:00:32 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 12:04:42 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 12:04:51 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 12:04:58 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 12:05:02 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:21:03 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:21:06 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:21:54 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:21:59 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:30:37 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:40:08 --> 404 Page Not Found: cooperater/Corp/updatecorp
+ERROR - 2017-07-06 13:40:27 --> Severity: Notice --> Undefined variable: cpt F:\PHP\Code\workspace\Portal2.0\gui\setting.php 29
+ERROR - 2017-07-06 13:40:27 --> Severity: Notice --> Undefined variable: cpt F:\PHP\Code\workspace\Portal2.0\gui\setting.php 33
+ERROR - 2017-07-06 13:40:27 --> Severity: Notice --> Undefined variable: cpt F:\PHP\Code\workspace\Portal2.0\gui\setting.php 37
+ERROR - 2017-07-06 13:40:27 --> Severity: Notice --> Undefined variable: cpt F:\PHP\Code\workspace\Portal2.0\gui\setting.php 41
+ERROR - 2017-07-06 13:40:27 --> Severity: Notice --> Undefined variable: cpt F:\PHP\Code\workspace\Portal2.0\gui\setting.php 45
+ERROR - 2017-07-06 13:40:27 --> Severity: Notice --> Undefined variable: cpt F:\PHP\Code\workspace\Portal2.0\gui\setting.php 49
+ERROR - 2017-07-06 13:40:27 --> Severity: Notice --> Undefined variable: cpt F:\PHP\Code\workspace\Portal2.0\gui\setting.php 60
+ERROR - 2017-07-06 13:43:24 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:44:41 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:45:28 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from cooperater where cid = 'c4ca4238a0b923820dcc509a6f75849b.jpg'' at line 1 - Invalid query: update cooperater set nickname='linda',industry='1',name_manager='李再到',email='1127747107@qq.com',qq='1127747107@qq.com', logo from cooperater where cid = 'c4ca4238a0b923820dcc509a6f75849b.jpg'
+ERROR - 2017-07-06 13:45:55 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from cooperater where cid = '1'' at line 1 - Invalid query: update cooperater set nickname='linda',industry='1',name_manager='李再到',email='1127747107@qq.com',qq='1127747107@qq.com', logo='c4ca4238a0b923820dcc509a6f75849b.jpg' from cooperater where cid = '1'
+ERROR - 2017-07-06 13:50:09 --> Severity: Notice --> Undefined index: corplogo F:\PHP\Code\workspace\Portal2.0\gui\top.php 38
+ERROR - 2017-07-06 13:50:39 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:50:40 --> Severity: Notice --> Undefined index: cooperater_name F:\PHP\Code\workspace\Portal2.0\gui\top.php 38
+ERROR - 2017-07-06 13:50:40 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:50:41 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-06 13:51:07 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:51:45 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 13:56:17 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:56:44 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:56:45 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:56:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-06 13:56:46 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-06 13:56:46 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:56:48 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:56:53 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:57:26 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 13:57:27 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:04:50 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:06:06 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:06:14 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:07:12 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:07:31 --> Severity: Notice --> Undefined variable: tmp F:\PHP\Code\workspace\Portal2.0\gui\addtemplate.php 24
+ERROR - 2017-07-06 14:07:31 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:08:28 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:09:27 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:10:31 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:15:15 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:15:17 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:15:20 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:15:24 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 14:20:01 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:03:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:05:03 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:05:41 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:05:43 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:06:12 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:06:17 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:07:03 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:07:12 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:08:05 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:08:11 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:08:25 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:08:30 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:08:39 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:08:42 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:10:26 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:10:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:11:28 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:12:43 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:12:43 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 15:13:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:13:57 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:13:57 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:14:07 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:14:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:24:28 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:24:59 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 15:25:05 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:27:16 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:27:30 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:27:31 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:27:33 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:27:47 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:27:49 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:28:06 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:28:11 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:28:14 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:30:02 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:31:14 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:32:15 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:32:24 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:32:26 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:32:28 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:32:29 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:33:38 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:35:01 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:38:18 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:38:29 --> Severity: Warning --> unlink(u144001499325905.jpg): No such file or directory F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 167
+ERROR - 2017-07-06 15:38:38 --> Severity: Warning --> unlink(u131301499325905.jpg): No such file or directory F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 167
+ERROR - 2017-07-06 15:38:51 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:39:48 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? from template where id = ?' at line 1 - Invalid query: select  bgpic = ? from template where id = ?
+ERROR - 2017-07-06 15:40:09 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:40:50 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:42:11 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:43:12 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:43:22 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:44:31 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:44:51 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:44:54 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:44:57 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:10 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:19 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:20 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:21 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:22 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:42 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:55 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:46:58 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:47:17 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:54:39 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:54:54 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:54:55 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:54:56 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:55:51 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 15:55:53 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:03:29 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:03:29 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:03:31 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:03:50 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'pcauthpic='[\"u187231499328230.jpeg\",\"u168191499328230.jpeg\",\"u1785014993282' at line 1 - Invalid query: update template set title='苏打水'  pcauthpic='[\"u187231499328230.jpeg\",\"u168191499328230.jpeg\",\"u178501499328230.jpeg\"]'  authpic='[\"u150861499328230.jpg\",\"u183101499328230.jpg\",\"u195021499328230.jpeg\"]'  toppic='u159441499328230.jpg'  bgpic='u138891499328230.jpeg'  where id = '10' 
+ERROR - 2017-07-06 16:04:40 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:04:54 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:04:57 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:04:58 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:11:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:14:57 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:15:06 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:15:11 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:16:07 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:16:38 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:18:11 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:18:59 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:19:02 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 86
+ERROR - 2017-07-06 16:19:02 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 87
+ERROR - 2017-07-06 16:20:09 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:20:09 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:20:11 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:20:12 --> Severity: error --> Exception: 模版参数不全或内容有误， 请确认 F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 113
+ERROR - 2017-07-06 16:20:18 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:20:58 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:21:05 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:21:10 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 86
+ERROR - 2017-07-06 16:21:10 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 89
+ERROR - 2017-07-06 16:21:18 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:21:45 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:21:47 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:21:50 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 86
+ERROR - 2017-07-06 16:21:50 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 89
+ERROR - 2017-07-06 16:21:55 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:21:55 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:21:55 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 16:21:59 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:22:07 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 86
+ERROR - 2017-07-06 16:22:07 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 89
+ERROR - 2017-07-06 16:23:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:23:39 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:23:39 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 16:23:43 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:23:49 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 86
+ERROR - 2017-07-06 16:23:49 --> Severity: Warning --> unlink(F:\PHP\Code\workspace\Portal2.0\./res/images/template/): Permission denied F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Tmpmanage.php 89
+ERROR - 2017-07-06 16:24:22 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:24:23 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:24:23 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 16:24:25 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:24:42 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:24:42 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-06 16:24:46 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:24:54 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:24:55 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:44:07 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-06 16:44:22 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:44:23 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:44:23 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-06 16:44:24 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:44:40 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:45:00 --> Severity: Parsing Error --> syntax error, unexpected 'da4s6d5a4s6d4a6s' (T_STRING), expecting ',' or ';' F:\PHP\Code\workspace\Portal2.0\gui\template_pc.php 3
+ERROR - 2017-07-06 16:45:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:45:21 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:45:22 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:45:23 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:46:02 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:46:07 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:46:25 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:09 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:12 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:15 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:15 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:16 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:18 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:19 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:28 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:47:29 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:49:20 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:49:24 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:49:58 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:50:30 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:50:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:50:42 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:51:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:51:25 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:51:26 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:51:27 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 16:53:38 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:12:16 --> Severity: Notice --> Undefined variable: title F:\PHP\Code\workspace\Portal2.0\gui\template_pc.php 38
+ERROR - 2017-07-06 17:33:36 --> Severity: Error --> Call to undefined function ismobile() F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\Portal.php 43
+ERROR - 2017-07-06 17:34:29 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:34:32 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:34:41 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:34:43 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:34:45 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:44:13 --> Severity: Notice --> Undefined offset: 2 F:\PHP\Code\workspace\Portal2.0\gui\ad_pc.php 49
+ERROR - 2017-07-06 17:44:51 --> Severity: Notice --> Undefined offset: 2 F:\PHP\Code\workspace\Portal2.0\gui\ad_pc.php 49
+ERROR - 2017-07-06 17:45:06 --> Severity: Notice --> Undefined offset: 2 F:\PHP\Code\workspace\Portal2.0\gui\ad_pc.php 50
+ERROR - 2017-07-06 17:45:47 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:45:59 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 17:51:44 --> 404 Page Not Found: c/Wifidog/undefined
+ERROR - 2017-07-06 18:44:51 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 18:44:53 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 18:44:56 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 18:44:58 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 18:45:00 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 18:45:01 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 18:45:25 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-06 18:45:41 --> 404 Page Not Found: Res/images

@@ -1,0 +1,41 @@
+ERROR - 2017-08-10 10:33:53 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-10 10:33:55 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-10 11:20:53 --> 404 Page Not Found: c/Api/wifidog
+ERROR - 2017-08-10 12:21:05 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 179
+ERROR - 2017-08-10 13:52:34 --> 404 Page Not Found: Apple-touch-icon-120x120-precomposedpng/index
+ERROR - 2017-08-10 13:52:34 --> 404 Page Not Found: Apple-touch-icon-120x120png/index
+ERROR - 2017-08-10 13:52:34 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-08-10 13:52:34 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-08-10 13:52:34 --> 404 Page Not Found: c/Api/wifidog
+ERROR - 2017-08-10 13:52:34 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
+ERROR - 2017-08-10 13:52:34 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-10 14:58:17 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 15:01:05 --> Severity: Notice --> Undefined index: defaultap /Code/php/workspace/woms-portal/gui/adc/system_conf.php 28
+ERROR - 2017-08-10 15:01:05 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 15:01:27 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 15:02:00 --> Severity: Notice --> Undefined index: allow_user /Code/php/workspace/woms-portal/gui/adc/system_conf.php 33
+ERROR - 2017-08-10 15:02:33 --> Query error: Duplicate entry '0' for key 'PRIMARY' - Invalid query: insert into sysconfig (allow_aps, allow_users, defaulttmpid, redirect) value ('4','4','2','http://www.baidu.com')
+ERROR - 2017-08-10 15:02:38 --> Query error: Duplicate entry '0' for key 'PRIMARY' - Invalid query: insert into sysconfig (allow_aps, allow_users, defaulttmpid, redirect) value ('4','4','2','http://www.baidu.com')
+ERROR - 2017-08-10 15:57:48 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 15:58:29 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 15:58:48 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 15:58:48 --> 404 Page Not Found: cooperater/Factory/cooperater
+ERROR - 2017-08-10 15:59:10 --> 404 Page Not Found: cooperater/Factory/cooperater
+ERROR - 2017-08-10 15:59:10 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 15:59:35 --> 404 Page Not Found: cooperater/Factory/corpoptions
+ERROR - 2017-08-10 15:59:35 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:00:49 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:01:28 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:01:44 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:01:58 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:02:26 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:02:41 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:03:23 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:03:47 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:06:01 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:06:37 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:06:39 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:07:06 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:08:01 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:08:06 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-10 16:08:59 --> 404 Page Not Found: Res/js

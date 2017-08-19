@@ -1,0 +1,61 @@
+ERROR - 2017-08-18 09:18:18 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-18 09:18:28 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-18 09:44:35 --> 404 Page Not Found: /index
+ERROR - 2017-08-18 10:00:42 --> 404 Page Not Found: /index
+ERROR - 2017-08-18 10:00:50 --> 404 Page Not Found: /index
+ERROR - 2017-08-18 10:18:20 --> Severity: error --> Exception: Error Processing Request /Code/php/workspace/woms-portal/app/models/cooperater/Tmpmanage.php 55
+ERROR - 2017-08-18 10:26:28 --> Severity: error --> Exception: Error Processing Request /Code/php/workspace/woms-portal/app/models/cooperater/Tmpmanage.php 55
+ERROR - 2017-08-18 10:26:53 --> Severity: error --> Exception: Error Processing Request /Code/php/workspace/woms-portal/app/models/cooperater/Tmpmanage.php 55
+ERROR - 2017-08-18 10:27:41 --> Severity: error --> Exception: Error Processing Request /Code/php/workspace/woms-portal/app/models/cooperater/Tmpmanage.php 55
+ERROR - 2017-08-18 14:59:48 --> Severity: Notice --> Undefined property: Corp::$redis /Code/php/workspace/woms-portal/app/libraries/Func.php 8
+ERROR - 2017-08-18 14:59:48 --> Severity: Notice --> Undefined property: Factory::$redis /Code/php/workspace/woms-portal/app/libraries/Func.php 8
+ERROR - 2017-08-18 15:01:26 --> Severity: Notice --> Undefined property: Corp::$redis /Code/php/workspace/woms-portal/app/libraries/Func.php 8
+ERROR - 2017-08-18 15:01:27 --> Severity: Notice --> Undefined property: Factory::$redis /Code/php/workspace/woms-portal/app/libraries/Func.php 8
+ERROR - 2017-08-18 15:01:35 --> Severity: Notice --> Undefined property: Corp::$redis /Code/php/workspace/woms-portal/app/libraries/Func.php 8
+ERROR - 2017-08-18 15:01:36 --> Severity: Notice --> Undefined property: Factory::$redis /Code/php/workspace/woms-portal/app/libraries/Func.php 8
+ERROR - 2017-08-18 15:05:41 --> Severity: Error --> Class 'Redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:06:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:07:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:08:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:09:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:10:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:11:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:12:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:13:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:14:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:15:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:16:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:17:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:18:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:19:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:20:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:21:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:22:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:23:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:24:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:25:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:26:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:27:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:28:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:29:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:30:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:31:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:32:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:33:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:34:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:35:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:36:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:37:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:38:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:39:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:40:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:41:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:42:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:43:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:44:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:45:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:46:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:47:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:48:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:49:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12
+ERROR - 2017-08-18 15:50:41 --> Severity: Error --> Class 'redis' not found /Code/php/workspace/woms-portal/app/libraries/Mredis.php 12

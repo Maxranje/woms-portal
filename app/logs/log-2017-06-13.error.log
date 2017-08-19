@@ -1,0 +1,36 @@
+ERROR - 2017-06-13 17:25:09 --> $config['composer_autoload'] is set to TRUE but F:\PHP\Code\workspace\Portal2.0\app\vendor/autoload.php was not found.
+INFO - 2017-06-13 17:25:09 --> Config Class Initialized
+INFO - 2017-06-13 17:25:09 --> Hooks Class Initialized
+DEBUG - 2017-06-13 17:25:09 --> UTF-8 Support Enabled
+INFO - 2017-06-13 17:25:09 --> Utf8 Class Initialized
+INFO - 2017-06-13 17:25:09 --> URI Class Initialized
+INFO - 2017-06-13 17:25:09 --> Router Class Initialized
+INFO - 2017-06-13 17:25:09 --> Output Class Initialized
+INFO - 2017-06-13 17:25:09 --> Security Class Initialized
+DEBUG - 2017-06-13 17:25:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-06-13 17:25:09 --> Input Class Initialized
+INFO - 2017-06-13 17:25:09 --> Language Class Initialized
+INFO - 2017-06-13 17:25:09 --> Loader Class Initialized
+INFO - 2017-06-13 17:25:09 --> Helper loaded: url_helper
+INFO - 2017-06-13 17:25:09 --> Controller Class Initialized
+INFO - 2017-06-13 17:25:09 --> Model Class Initialized
+INFO - 2017-06-13 17:25:09 --> Database Driver Class Initialized
+INFO - 2017-06-13 17:25:09 --> File loaded: F:\PHP\Code\workspace\Portal2.0\gui\template_model.php
+INFO - 2017-06-13 17:25:09 --> Final output sent to browser
+DEBUG - 2017-06-13 17:25:09 --> Total execution time: 0.0430
+ERROR - 2017-06-13 17:25:42 --> $config['composer_autoload'] is set to TRUE but F:\PHP\Code\workspace\Portal2.0\app\vendor/autoload.php was not found.
+ERROR - 2017-06-13 17:25:50 --> $config['composer_autoload'] is set to TRUE but F:\PHP\Code\workspace\Portal2.0\app\vendor/autoload.php was not found.
+ERROR - 2017-06-13 17:25:52 --> $config['composer_autoload'] is set to TRUE but F:\PHP\Code\workspace\Portal2.0\app\vendor/autoload.php was not found.
+ERROR - 2017-06-13 17:25:54 --> $config['composer_autoload'] is set to TRUE but F:\PHP\Code\workspace\Portal2.0\app\vendor/autoload.php was not found.
+ERROR - 2017-06-13 17:28:56 --> Severity: Notice --> Undefined index: url F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 17
+ERROR - 2017-06-13 19:10:56 --> Query error: Table 'wifiap_plat.used' doesn't exist - Invalid query: select id from used where cid = '1' and uname = '123456'
+ERROR - 2017-06-13 19:11:02 --> Query error: Table 'wifiap_plat.used' doesn't exist - Invalid query: select id from used where cid = '1' and uname = '123456'
+ERROR - 2017-06-13 19:12:52 --> Severity: Notice --> Undefined variable: id F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\auth.php 93
+ERROR - 2017-06-13 19:12:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and state = '1'' at line 1 - Invalid query: update user set state = '0' where uid = ? and state = '1'
+ERROR - 2017-06-13 19:12:52 --> Severity: Notice --> Trying to get property of non-object F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\auth.php 66
+ERROR - 2017-06-13 19:12:52 --> Severity: Error --> Call to a member function affected_rows() on null F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\auth.php 66
+ERROR - 2017-06-13 19:23:29 --> 404 Page Not Found: Res/js
+ERROR - 2017-06-13 19:23:29 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-13 19:24:56 --> 404 Page Not Found: Res/js
+ERROR - 2017-06-13 19:26:17 --> 404 Page Not Found: /index
+ERROR - 2017-06-13 19:26:27 --> 404 Page Not Found: Res/js

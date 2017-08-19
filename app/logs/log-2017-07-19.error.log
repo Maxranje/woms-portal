@@ -1,0 +1,28 @@
+ERROR - 2017-07-19 11:09:18 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-19 11:09:20 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-19 11:09:54 --> 404 Page Not Found: admin/Adc/smscontentgrant
+ERROR - 2017-07-19 11:15:52 --> Query error: Unknown column 'cid' in 'where clause' - Invalid query: update apconfig set usecountgrant = 20 where cid = '16'
+ERROR - 2017-07-19 11:15:54 --> Query error: Unknown column 'cid' in 'where clause' - Invalid query: update apconfig set usecountgrant = 20 where cid = '16'
+ERROR - 2017-07-19 11:16:05 --> Query error: Unknown column 'cid' in 'where clause' - Invalid query: update apconfig set usecountgrant = 50 where cid = '16'
+ERROR - 2017-07-19 11:17:03 --> 404 Page Not Found: admin/Adc/smscontentgrant
+ERROR - 2017-07-19 11:19:14 --> Severity: error --> Exception: F:\PHP\Code\workspace\Portal2.0\app\models/admin/Smsmanage.php exists, but doesn't declare class Smsmanage F:\PHP\Code\workspace\Portal2.0\sys\core\Loader.php 336
+ERROR - 2017-07-19 11:23:32 --> 404 Page Not Found: admin/Factory/smsmanage
+ERROR - 2017-07-19 11:23:40 --> 404 Page Not Found: admin/Factory/smsmanage
+ERROR - 2017-07-19 11:24:07 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-19 11:24:39 --> 404 Page Not Found: Res/js
+ERROR - 2017-07-19 11:24:42 --> 404 Page Not Found: admin/Adc/smscontentlist
+ERROR - 2017-07-19 11:25:03 --> 404 Page Not Found: admin/Factory/smsmanage
+ERROR - 2017-07-19 11:34:34 --> 404 Page Not Found: admin/Factory/smsmanage
+ERROR - 2017-07-19 11:34:48 --> 404 Page Not Found: admin/Factory/smsmanage
+ERROR - 2017-07-19 11:35:27 --> Severity: Notice --> Undefined index: reson F:\PHP\Code\workspace\Portal2.0\app\models\admin\Smsmanage.php 52
+ERROR - 2017-07-19 11:35:27 --> Severity: Notice --> Undefined index: reson F:\PHP\Code\workspace\Portal2.0\app\models\admin\Smsmanage.php 52
+ERROR - 2017-07-19 11:35:57 --> Severity: Notice --> Undefined index: reson F:\PHP\Code\workspace\Portal2.0\app\models\admin\Smsmanage.php 52
+ERROR - 2017-07-19 11:35:57 --> Severity: Notice --> Undefined index: reson F:\PHP\Code\workspace\Portal2.0\app\models\admin\Smsmanage.php 52
+ERROR - 2017-07-19 11:40:02 --> 404 Page Not Found: admin/Adc/smstemplate
+ERROR - 2017-07-19 11:44:52 --> 404 Page Not Found: admin/Adc/systemconfig
+ERROR - 2017-07-19 11:48:19 --> Severity: error --> Exception: 请求失败，请求参数错误 F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Apmanage.php 29
+ERROR - 2017-07-19 14:06:56 --> 404 Page Not Found: Res/images
+ERROR - 2017-07-19 14:06:59 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-19 15:25:35 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-19 15:28:31 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53
+ERROR - 2017-07-19 15:31:29 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\gui\authstatistics.php 53

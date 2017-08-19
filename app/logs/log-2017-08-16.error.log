@@ -1,0 +1,16 @@
+ERROR - 2017-08-16 10:26:04 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-16 10:26:05 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-16 14:19:51 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-16 14:19:56 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-16 14:56:45 --> Severity: Parsing Error --> parse error /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 21
+ERROR - 2017-08-16 14:57:10 --> Severity: 4096 --> Object of class Splash_mo could not be converted to string /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 21
+ERROR - 2017-08-16 14:57:10 --> Severity: Notice --> Object of class Splash_mo to string conversion /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 21
+ERROR - 2017-08-16 14:57:10 --> Severity: Notice --> Undefined variable: Object /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 21
+ERROR - 2017-08-16 14:57:10 --> Severity: Notice --> Trying to get property of non-object /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 21
+ERROR - 2017-08-16 14:57:10 --> Severity: Error --> Call to a member function get() on null /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 21
+ERROR - 2017-08-16 14:57:38 --> Severity: Notice --> Undefined variable: wlanuserip /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 23
+ERROR - 2017-08-16 15:21:30 --> Query error: Unknown column 'auth_success_redirect' in 'field list' - Invalid query: select auth_success_redirect from sysconfig
+ERROR - 2017-08-16 15:22:07 --> Query error: Unknown column 'auth_success_redirect' in 'field list' - Invalid query: select auth_success_redirect from sysconfig
+ERROR - 2017-08-16 15:22:19 --> Query error: Unknown column 'auth_success_redirect' in 'field list' - Invalid query: select auth_success_redirect from sysconfig
+ERROR - 2017-08-16 15:24:55 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-16 15:25:02 --> 404 Page Not Found: Res/js

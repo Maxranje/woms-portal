@@ -1,0 +1,104 @@
+ERROR - 2017-08-07 09:11:01 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:11:01 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:11:01 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:11:01 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:11:31 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:11:31 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:12:47 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:12:47 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:13:31 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:13:31 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:35:49 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:35:49 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:36:15 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:36:15 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:36:19 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 09:36:19 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 09:55:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-07 09:55:19 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-07 09:55:23 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/gui/authstatistics.php 53
+ERROR - 2017-08-07 09:55:23 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/gui/authstatistics.php 53
+ERROR - 2017-08-07 10:36:19 --> Severity: Notice --> Undefined index: reson /Code/php/workspace/woms-portal/gui/authtemplate.php 67
+ERROR - 2017-08-07 10:44:59 --> 404 Page Not Found: Adc/index
+ERROR - 2017-08-07 10:45:02 --> 404 Page Not Found: admin/Adc/logi
+ERROR - 2017-08-07 10:45:13 --> Severity: Notice --> Undefined variable: sc /Code/php/workspace/woms-portal/app/models/admin/Tmpmanage.php 93
+ERROR - 2017-08-07 10:45:17 --> Severity: Notice --> Undefined variable: sc /Code/php/workspace/woms-portal/app/models/admin/Tmpmanage.php 93
+ERROR - 2017-08-07 10:45:20 --> Severity: Notice --> Undefined variable: sc /Code/php/workspace/woms-portal/app/models/admin/Tmpmanage.php 93
+ERROR - 2017-08-07 10:46:19 --> Severity: Notice --> Undefined variable: sc /Code/php/workspace/woms-portal/app/models/admin/Tmpmanage.php 93
+ERROR - 2017-08-07 11:05:46 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 11:05:46 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 11:05:49 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 11:05:49 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 11:05:49 --> 404 Page Not Found: Apple-touch-icon-120x120-precomposedpng/index
+ERROR - 2017-08-07 11:05:49 --> 404 Page Not Found: Apple-touch-icon-120x120png/index
+ERROR - 2017-08-07 11:05:49 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-08-07 11:05:49 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-08-07 11:05:49 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
+ERROR - 2017-08-07 11:05:49 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-07 11:06:16 --> Severity: Notice --> Undefined variable: apid /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 104
+ERROR - 2017-08-07 11:06:16 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = NULL and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 11:07:12 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = '16' and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 11:07:33 --> Query error: Unknown column 'state' in 'field list' - Invalid query: update bindmac set state ='0' where apid = '16' and mac = '48:3B:38:90:56:EA'
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'cid' /Code/php/workspace/woms-portal/gui/template_mobile.php 65
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 66
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 69
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'id' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'name' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'cid' /Code/php/workspace/woms-portal/gui/template_mobile.php 65
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 66
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 69
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'id' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'name' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'cid' /Code/php/workspace/woms-portal/gui/template_mobile.php 65
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 66
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 69
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'id' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'name' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Notice --> Uninitialized string offset: 0 /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Notice --> Uninitialized string offset: 0 /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Notice --> Uninitialized string offset: 0 /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Notice --> Uninitialized string offset: 0 /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Notice --> Uninitialized string offset: 0 /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Notice --> Uninitialized string offset: 0 /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 45
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'cid' /Code/php/workspace/woms-portal/gui/template_mobile.php 65
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 66
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'state' /Code/php/workspace/woms-portal/gui/template_mobile.php 69
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'id' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'name' /Code/php/workspace/woms-portal/gui/template_mobile.php 73
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 80
+ERROR - 2017-08-07 11:09:57 --> Severity: Warning --> Illegal string offset 'type' /Code/php/workspace/woms-portal/gui/template_mobile.php 118
+ERROR - 2017-08-07 19:26:10 --> 404 Page Not Found: c/Api/wifidog

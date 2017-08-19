@@ -1,0 +1,63 @@
+ERROR - 2017-06-26 11:03:58 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:04:00 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-06-26 11:04:23 --> 404 Page Not Found: c/Wifidog/authping
+ERROR - 2017-06-26 11:20:04 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:20:04 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = NULL and mac = NULL and state = '1' 
+ERROR - 2017-06-26 11:20:05 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:20:05 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = NULL and mac = NULL and state = '1' 
+ERROR - 2017-06-26 11:21:49 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:21:49 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = NULL and mac = NULL and state = '1' 
+ERROR - 2017-06-26 11:21:52 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:21:52 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = NULL and mac = NULL and state = '1' 
+ERROR - 2017-06-26 11:22:13 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:22:13 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = NULL and mac = NULL and state = '1' 
+ERROR - 2017-06-26 11:22:16 --> Severity: Notice --> Undefined variable: apid F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:22:16 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = NULL and mac = NULL and state = '1' 
+ERROR - 2017-06-26 11:23:40 --> Severity: Parsing Error --> syntax error, unexpected ',', expecting ')' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:23:40 --> Severity: Parsing Error --> syntax error, unexpected ',', expecting ')' F:\PHP\Code\workspace\Portal2.0\app\models\api\wifidog\splash_mo.php 71
+ERROR - 2017-06-26 11:24:03 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = NULL and state = '1' 
+ERROR - 2017-06-26 11:36:43 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:43 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:48 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:48 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:48 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:49 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:49 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:49 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:50 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:36:50 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:41:08 --> Query error: Unknown column 'state' in 'where clause' - Invalid query: select * from bindmac where apid = '10' and mac = '48:3b:38:90:56:ea' and state = '1' 
+ERROR - 2017-06-26 11:42:00 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:42:03 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-06-26 11:43:29 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:44:42 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:44:46 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:44:46 --> 404 Page Not Found: /index
+ERROR - 2017-06-26 11:45:23 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:48:16 --> Severity: Notice --> Undefined variable: bindvalidatetime F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Apmanage.php 430
+ERROR - 2017-06-26 11:48:19 --> 404 Page Not Found: Res/js
+ERROR - 2017-06-26 11:48:23 --> Severity: Notice --> Undefined variable: bindvalidatetime F:\PHP\Code\workspace\Portal2.0\app\models\cooperater\Apmanage.php 430
+ERROR - 2017-06-26 11:50:27 --> 404 Page Not Found: Res/js
+ERROR - 2017-06-26 11:52:01 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:53:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:54:09 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:54:18 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 11:55:23 --> 404 Page Not Found: Res/images
+ERROR - 2017-06-26 12:34:43 --> 404 Page Not Found: Apple-touch-icon-120x120-precomposedpng/index
+ERROR - 2017-06-26 12:34:43 --> 404 Page Not Found: Apple-touch-icon-120x120png/index
+ERROR - 2017-06-26 12:34:43 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-06-26 12:34:43 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-06-26 12:34:43 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
+ERROR - 2017-06-26 12:34:43 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-06-26 12:36:35 --> 404 Page Not Found: Apple-touch-icon-120x120-precomposedpng/index
+ERROR - 2017-06-26 12:36:35 --> 404 Page Not Found: Apple-touch-icon-120x120png/index
+ERROR - 2017-06-26 12:36:35 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-06-26 12:36:35 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-06-26 12:36:35 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
+ERROR - 2017-06-26 12:36:35 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-06-26 13:35:42 --> 404 Page Not Found: Apple-touch-icon-120x120-precomposedpng/index
+ERROR - 2017-06-26 13:35:43 --> 404 Page Not Found: Apple-touch-icon-120x120png/index
+ERROR - 2017-06-26 13:35:43 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-06-26 13:35:43 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-06-26 13:35:43 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
+ERROR - 2017-06-26 13:35:43 --> 404 Page Not Found: Faviconico/index

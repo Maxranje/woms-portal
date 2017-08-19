@@ -1,0 +1,17 @@
+ERROR - 2017-08-01 09:39:55 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-01 09:39:58 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-01 09:40:04 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-01 09:40:29 --> 404 Page Not Found: admin/Adc/logn
+ERROR - 2017-08-01 09:50:59 --> Severity: Notice --> Undefined variable: corp /Code/php/workspace/woms-portal/gui/adc/template_grant.php 48
+ERROR - 2017-08-01 09:50:59 --> Severity: Warning --> Invalid argument supplied for foreach() /Code/php/workspace/woms-portal/gui/adc/template_grant.php 48
+ERROR - 2017-08-01 10:08:05 --> 404 Page Not Found: admin/Adc/templategrant
+ERROR - 2017-08-01 10:16:36 --> Severity: Error --> Call to undefined method Smsmanage::gettemplatelist() /Code/php/workspace/woms-portal/app/controllers/admin/Factory.php 21
+ERROR - 2017-08-01 10:16:57 --> Severity: Error --> Call to undefined method Smsmanage::gettemplatelist() /Code/php/workspace/woms-portal/app/controllers/admin/Factory.php 21
+ERROR - 2017-08-01 10:17:50 --> Severity: Error --> Call to undefined method Smsmanage::gettemplatelist() /Code/php/workspace/woms-portal/app/controllers/admin/Factory.php 21
+ERROR - 2017-08-01 10:20:22 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-01 14:05:52 --> Severity: Parsing Error --> parse error /Code/php/workspace/woms-portal/gui/authtemplate.php 61
+ERROR - 2017-08-01 14:06:51 --> Severity: Notice --> Undefined index: toppic /Code/php/workspace/woms-portal/app/models/cooperater/Tmpmanage.php 81
+ERROR - 2017-08-01 14:06:51 --> Severity: Notice --> Undefined index: bgpic /Code/php/workspace/woms-portal/app/models/cooperater/Tmpmanage.php 82
+ERROR - 2017-08-01 14:28:40 --> 404 Page Not Found: cooperater/Corp/addsptemplate
+ERROR - 2017-08-01 14:45:25 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-01 14:45:51 --> 404 Page Not Found: Res/js

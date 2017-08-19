@@ -1,0 +1,17 @@
+ERROR - 2017-08-02 10:32:38 --> 404 Page Not Found: /index
+ERROR - 2017-08-02 10:32:42 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-02 10:36:11 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-02 11:29:02 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-02 11:29:08 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-02 11:29:17 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-02 11:30:45 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-02 11:33:53 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-02 11:35:58 --> 404 Page Not Found: Res/js
+ERROR - 2017-08-02 12:58:51 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 187
+ERROR - 2017-08-02 12:58:51 --> Severity: Notice --> Undefined index: authpic /Code/php/workspace/woms-portal/app/models/api/wifidog/Portal.php 41
+ERROR - 2017-08-02 12:58:51 --> Severity: Notice --> Undefined index: pcauthpic /Code/php/workspace/woms-portal/app/models/api/wifidog/Portal.php 42
+ERROR - 2017-08-02 13:42:27 --> Severity: Parsing Error --> parse error /Code/php/workspace/woms-portal/gui/authtemplate.php 92
+ERROR - 2017-08-02 13:42:35 --> Severity: Parsing Error --> parse error /Code/php/workspace/woms-portal/gui/authtemplate.php 92
+ERROR - 2017-08-02 13:42:38 --> Severity: Parsing Error --> parse error /Code/php/workspace/woms-portal/gui/authtemplate.php 92
+ERROR - 2017-08-02 14:59:10 --> 404 Page Not Found: /index
+ERROR - 2017-08-02 14:59:10 --> 404 Page Not Found: Faviconico/index
