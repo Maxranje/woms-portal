@@ -15,13 +15,13 @@
 	<div class="navbar-header aside-md"> 
 		<a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"> 
 		<i class="fa fa-bars"></i> </a> <a href="#" class="navbar-brand" data-toggle="fullscreen">
-		<img src="/res/images/logo.png" class="m-r-sm">WOMS管理员平台</a> 
+		<img src="/res/images/logo_r.png" class="m-r-sm">WOMS管理员平台</a> 
 		<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> 	<i class="fa fa-cog"></i> </a> 
 	</div>
 	<ul class="nav navbar-nav navbar-right hidden-xs nav-user">
 		<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?=$_SESSION['adcuser']?> <b class="caret"></b> </a>
 			<ul class="dropdown-menu animated fadeInRight"><span class="arrow top"></span>
-				<li> <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a> </li>
+				<li> <a href="/adc/logout">退出</a> </li>
 			</ul>
 		</li>
 	</ul>
@@ -72,7 +72,7 @@
 					</div>
 				</section>
 				<footer class="footer lt hidden-xs b-t b-light h6" style="min-height: 30px; text-align: center; line-height: 30px;">
-					<i class="fa fa-gg m-r-sm" aria-hidden="true"></i>系统版本 1.0.0.5
+					<i class="fa fa-gg m-r-sm" aria-hidden="true"></i>系统版本 1.0.0.8
 				</footer>					
 			</section>
 		</aside>

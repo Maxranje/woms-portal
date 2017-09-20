@@ -24,7 +24,7 @@ class Login extends CI_Controller {
 				throw new Exception ("校验参数不正确");
 			}
 			$password = substr(md5($password), 0, 16);
-			$sql = "select adcid from adc where adcuser = ? and adcpsw = ?";
+			$sql = "select adcid from adc where binary adcuser = ? and adcpsw = ?";
 			$res = $this->db->query ($sql, array($username, $password));
 			if(!$res || $res->num_rows() == 0) {
 				throw new Exception ('用户名密码错误');

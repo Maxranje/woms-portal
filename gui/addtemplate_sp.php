@@ -41,7 +41,7 @@ include ('top.php');
 									<p class="h5 m-b">模板名称</p>
 									<div class="form-group col-sm-12">
 										<input type="hidden" name="type" value="sp">
-										<input type="text" class="form-control input-sm" placeholder="模版名称" name="name"  data-parsley-required="true">
+										<input type="text" class="form-control input-sm" placeholder="" name="name"  data-parsley-required="true" data-parsley-length="[4, 32]">
 									</div>
 									<div class="line line-dashed line-lg pull-in"></div>
 									<p class="h5 m-b">页面标题</p>

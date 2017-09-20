@@ -87,11 +87,11 @@ function createTable (){
 		displayMsg:'数据从 {from} 到 {to}, 共 {total} 条数据'
 	})	
 }
-function showTipMessageDialog(msg, state, title="信息", uri=""){
+function showTipMessageDialog(msg, state, title="提示信息", uri=""){
 	if(state == "success"){
-		msg = "<p class='text-success font-bold'>"+msg+"</p>";
+		msg = "<p class='text-primary text-left'>"+msg+"</p>";
 	}else{
-		msg = "<p class='text-danger font-bold'>"+msg+"</p>";
+		msg = "<p class='text-danger text-left'>"+msg+"</p>";
 	}
 	if(uri != ""){
 		$('.return-list').removeClass('d-n');

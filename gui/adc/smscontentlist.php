@@ -26,12 +26,11 @@ include ('top.php');
 				
 				<!-- device table --> 
 				<section class="scrollable wrapper">
-					<table  id="table">
-					</table>
+					<table  id="table"></table>
 				</section>
 
 				<div id="tb" style="height:auto; padding: 5px 10px">
-					<form class="form-inline" role="form">
+					<div class="form-inline" role="form">
 						<div class="row">
 							<div class="form-group col-sm-2">
 								<select name="" class="form-control input-sm statefilter">
@@ -53,7 +52,7 @@ include ('top.php');
 							</div>					
 							<button class="btn btn-default btn-sm btn-filter">过滤</button>
 						</div>				
-					</form>
+					</div>
 				</div>	
 			</section>
 		</aside>

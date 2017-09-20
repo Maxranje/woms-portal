@@ -290,7 +290,7 @@ function getLineChartsOptions(xa, yb){
             formatter: '{b0}<br />认证上网人数：{c0}人'
         },        
         title: { text: '每日认证上网统计表' },
-        grid: { left: '2%', right: '2%', bottom: '12%', top:'15%',  containLabel: true},
+        grid: { left: '2%', right: '5%', bottom: '12%', top:'15%',  containLabel: true},
         legend: { data:['认证上网人数'] },
         toolbox: {show: true, feature: { magicType: {type: ['line', 'bar']}, } },
         dataZoom: [ { show: true, realtime: true, }, { type: 'inside', realtime: true, } ],

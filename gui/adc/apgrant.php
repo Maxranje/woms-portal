@@ -13,12 +13,11 @@ include ('top.php');
 						<div class="col-sm-8 m-b-xs">
 							<div class="btn-group">		
 								<a class="btn btn-sm btn-default m-r-sm refresh" ><i class="fa fa-refresh"></i></a>
-								<!-- <a class="btn btn-sm btn-default m-r-sm " href="/corp/addap"><i class="fa fa-plus m-r-sm"></i>添加</a> -->
 							</div>
 						</div>
 						<div class="col-sm-4 m-b-xs">
 							<div class="input-group">
-								<input type="text" class="input-sm form-control searchbox" placeholder="Search">		
+								<input type="text" class="input-sm form-control searchbox" placeholder="模糊搜索接入点名称">		
 								<span class="input-group-btn"><button class="btn btn-sm btn-default btn-search" type="button"><i class="fa fa-search"></i></button></span> 	
 							</div>
 						</div>
@@ -45,8 +44,7 @@ include ('top.php');
 <link rel="stylesheet" href="/res/js/esgrid/themes/icon.css" type="text/css" />
 <script src="/res/js/esgrid/jquery.easyui.min.js"></script>
 <script type="text/javascript">
-G.set("remove_url", "/corp/apoptions/apremove")
-	.set('nav_name', 'apgrant');
+G.set("remove_url", "/corp/apoptions/apremove").set('nav_name', 'apgrant');
 
 $(function (){
 
@@ -54,24 +52,20 @@ $(function (){
 		$('#table').datagrid('load',{sc: $('.searchbox').val()});
 	});
 	
-	$(document).on('click','.apconfig', function (){
-		let filed = $(this).parents('tr').find('.datagrid-cell-c2-id').html();
-		let map = new Map().set('id',filed);
-		zy.submit_form_action ("/corp/apauthconf", map);
-	});
-	
 	initTables();
 
 }); 
 function initTables (){
 	var columns=[
-		{field:'id', title:'接入点ID', width:20, align:'center', },
+		{field:'id', title:'接入点ID', width:10, align:'center', },
 		{field:'cpun', title:'商家登录名', width:20, align:'center'},
 		{field:'nickname', title:'商家昵称', width:20, align:'center'},
-		{field:'apname', title:'接入点名称', width:40, align:'center'},
+		{field:'apname', title:'接入点名称', width:30, align:'center'},
 		{field:'devtype', title:'接入点类型', width:20, align:'center'},
-		{field:'usecountgrant', title:'授权用户数', width:20, align:'center'},
-		{field:'grant', title:'授权接入用户数', width:60,align:'center', formatter:function (value, row, index) {
+		{field:'usecountgrant', title:'授权用户数', width:20, align:'center',formatter:function (value, row, index) {
+			return '<span class="text-danger font-bold">'+value+' 人</span>';
+		}},
+		{field:'grant', title:'授权接入用户数', width:30,align:'center', formatter:function (value, row, index) {
 			return '<input type="text" style="width:80px;"><button  class="m-l-xs" onclick="corp_grant('+row.id+', event)">授权</button>';}
 		}			
 	];

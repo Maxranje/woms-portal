@@ -22,9 +22,12 @@ class Wxmanage extends CI_Model {
 		$this->data['url'] = "";		
 		if(isset($result['wxtoken']) && !empty($result['wxtoken'])){
 			if($_SERVER['SERVER_PORT'] == 443){
-				$this->data['url'] = "https://".$_SERVER['SERVER_NAME']."/c/api/thlogin/weixin/?cid=".$_SESSION['cid']."&token=".$result['wxtoken'];
-			}else{
-				$this->data['url'] = "http://".$_SERVER['SERVER_NAME'].":".$_SERVER['SERVER_PORT']."/c/api/thlogin/weixin/?cid=".$_SESSION['cid']."&token=".$result['wxtoken'];
+				$this->data['url'] = "https://".$_SERVER['HTTP_HOST']."/c/api/thlogin/weixin/?cid=".$_SESSION['cid']."&token=".$result['wxtoken'];
+			}
+			if($_SERVER['SERVER_PORT'] == 80){
+				$this->data['url'] = "http://".$_SERVER['HTTP_HOST']."/c/api/thlogin/weixin/?cid=".$_SESSION['cid']."&token=".$result['wxtoken'];
+			}else {
+				$this->data['url'] = "<span class='text-danger'>系统部署在非80, 443端口上， 无法使用微信认证,  请联系管理员</span>";
 			}
 		}
 		$this->data['wx'] = $result ;
@@ -45,8 +48,8 @@ class Wxmanage extends CI_Model {
 
 			$wxtoken = $this->func->getToken(17);
 			$this->db->trans_start();
-			$query = 'update cooperater set wxaccount=?, wxtoken=?, wxlinktitle=?, wxlinkcontent=?, wxlinkurl=?, wxdocurl=?';
-			$array = array($wxaccount, $wxtoken, $wxlinktitle, $wxlinkcontent, $wxlinkurl, $wxdockurl);
+			$query = 'update cooperater set wxaccount=?, wxtoken=?, wxlinktitle=?, wxlinkcontent=?, wxlinkurl=?';
+			$array = array($wxaccount, $wxtoken, $wxlinktitle, $wxlinkcontent, $wxlinkurl);
 			if(!empty($wxrqcode)){
 				$query .= ' ,wxrqcode=? ';
 				$array[] = $wxrqcode;
@@ -81,14 +84,14 @@ class Wxmanage extends CI_Model {
 			return "";
 		}
 		$config['upload_path']     	 = "./res/images/wx/";
-		$config['allowed_types']   	 = 'png|jpg|jpeg';
+		$config['allowed_types']   	 = '*';
 		$config['file_ext_tolower']	 = true;
 		$config['overwrite']		 = true;
 		$config['file_name']		 = "u".$_SESSION['cid']."wxrqcode";
 
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload($name)){
-			throw new Exception ($this->upload->display_errors());
+			throw new Exception ($this->upload->display_errors('<span>',"</span>"));
 		}
 		return $this->upload->data('raw_name').$this->upload->data('file_ext');
 	}

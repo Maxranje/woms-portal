@@ -97,7 +97,7 @@ $(function (){
 			return false;
 		}	
 		zy.send_sync_ajax('/corp/wboptions/blackedit', $('form').serialize(), function (data){
-			showTipMessageDialog(data.reson,data.state, "Message", "/corp/authblacklist");
+			showTipMessageDialog(data.reson,data.state, "提示信息", "/corp/authblacklist");
 		});
 	});
 

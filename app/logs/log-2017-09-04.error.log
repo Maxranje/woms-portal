@@ -1,0 +1,122 @@
+ERROR - 2017-09-04 10:08:41 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 10:08:43 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-04 10:30:29 --> Severity: Notice --> Undefined variable: wlanip /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 28
+ERROR - 2017-09-04 10:30:29 --> Query error: Unknown column 'a.wlanacip' in 'where clause' - Invalid query: select a.*, ac.* from ap a, apconfig ac where a.apid = ac.apid and a.apname = 'portal' and a.wlanacip = NULL
+ERROR - 2017-09-04 10:32:12 --> Severity: Notice --> Undefined variable: wlanip /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 28
+ERROR - 2017-09-04 10:32:12 --> Query error: Unknown column 'a.wlanacip' in 'where clause' - Invalid query: select a.*, ac.* from ap a, apconfig ac where a.apid = ac.apid and a.apname = 'portal' and a.wlanacip = NULL
+ERROR - 2017-09-04 10:33:36 --> Severity: Notice --> Undefined variable: wlanip /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 28
+ERROR - 2017-09-04 10:33:36 --> Query error: Unknown column 'a.wlanacip' in 'where clause' - Invalid query: select a.*, ac.* from ap a, apconfig ac where a.apid = ac.apid and a.apname = 'portal' and a.wlanacip = NULL
+ERROR - 2017-09-04 10:33:57 --> Severity: Notice --> Undefined variable: wlanip /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 28
+ERROR - 2017-09-04 10:33:57 --> Query error: Unknown column 'a.wlanacip' in 'where clause' - Invalid query: select a.*, ac.* from ap a, apconfig ac where a.apid = ac.apid and a.apname = 'portal' and a.wlanacip = NULL
+ERROR - 2017-09-04 10:34:19 --> Query error: Unknown column 'a.wlanip' in 'where clause' - Invalid query: select a.*, ac.* from ap a, apconfig ac where a.apid = ac.apid and a.apname = 'portal' and a.wlanip = '172.16.75.63'
+ERROR - 2017-09-04 10:36:38 --> Severity: Notice --> Undefined property: Portal::$func /Code/php/workspace/woms-portal/sys/core/Model.php 77
+ERROR - 2017-09-04 10:36:38 --> Severity: Error --> Call to a member function ismobile() on null /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 154
+ERROR - 2017-09-04 10:36:38 --> Severity: Notice --> Undefined variable: heading /Code/php/workspace/woms-portal/gui/errors/html/error_general.php 60
+ERROR - 2017-09-04 10:37:24 --> Severity: Parsing Error --> parse error /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 9
+ERROR - 2017-09-04 10:37:24 --> Severity: Notice --> Undefined variable: heading /Code/php/workspace/woms-portal/gui/errors/html/error_general.php 60
+ERROR - 2017-09-04 10:37:35 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 10:37:35 --> 404 Page Not Found: c/Api/portal
+ERROR - 2017-09-04 10:37:56 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 10:39:50 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' /Code/php/workspace/woms-portal/app/models/api/portal/Splash_mo.php 183
+ERROR - 2017-09-04 10:39:51 --> Severity: Notice --> Undefined index: wlanip /Code/php/workspace/woms-portal/app/models/api/portal/Auth.php 50
+ERROR - 2017-09-04 10:39:51 --> Severity: Warning --> stream_socket_client(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known /Code/php/workspace/woms-portal/app/libraries/Socket.php 14
+ERROR - 2017-09-04 10:39:51 --> Severity: Warning --> stream_socket_client(): unable to connect to udp://:2000 (php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known) /Code/php/workspace/woms-portal/app/libraries/Socket.php 14
+ERROR - 2017-09-04 10:40:21 --> Severity: Notice --> Undefined offset: 2 /Code/php/workspace/woms-portal/app/libraries/Packet.php 67
+ERROR - 2017-09-04 10:41:30 --> Severity: Notice --> Undefined offset: 2 /Code/php/workspace/woms-portal/app/libraries/Packet.php 67
+ERROR - 2017-09-04 15:04:02 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:08:18 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:09:00 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 15:10:30 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:10:30 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:10:30 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:10:55 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:10:55 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:10:55 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:11:04 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 15:11:10 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:11:19 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:12:25 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:12:31 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:13:00 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:13:18 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:13:27 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:13:44 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:14:03 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:14:20 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:14:51 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:15:13 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:15:25 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:15:36 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:15:48 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:22:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 15:22:36 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 15:35:06 --> 404 Page Not Found: /index
+ERROR - 2017-09-04 15:35:06 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-04 15:58:53 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 15:59:08 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 15:59:50 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-04 15:59:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:59:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:59:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:59:52 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 15:59:56 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:59:56 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:59:56 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 15:59:56 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:00:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:00:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:00:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:00:52 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:01:03 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:01:41 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:02:38 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:02:58 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:03:22 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:03:41 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:04:12 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:04:17 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:04:54 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:04:59 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:05:33 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:07:27 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:07:37 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:07:37 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:07:37 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:07:37 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:08:01 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:08:22 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:08:35 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:09:08 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:09:21 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-04 16:09:23 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:09:23 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:09:23 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:09:23 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:09:28 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:09:30 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:09:34 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:10:02 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:10:13 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:10:16 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:16 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:16 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:18 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:18 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:18 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:55 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:55 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:10:55 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:11:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:11:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:11:52 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:13:00 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:13:00 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-04 16:13:38 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-04 16:13:38 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-04 16:15:05 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-04 16:16:25 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-04 16:16:26 --> 404 Page Not Found: Res/fonts
+ERROR - 2017-09-04 16:16:26 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:16:26 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:16:26 --> 404 Page Not Found: Corp/js
+ERROR - 2017-09-04 16:16:49 --> 404 Page Not Found: Res/images

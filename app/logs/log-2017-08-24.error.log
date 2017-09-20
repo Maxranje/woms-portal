@@ -1,0 +1,20 @@
+ERROR - 2017-08-24 10:35:18 --> 404 Page Not Found: /index
+ERROR - 2017-08-24 10:35:19 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-24 10:35:20 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
+ERROR - 2017-08-24 10:35:20 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2017-08-24 10:35:22 --> 404 Page Not Found: /index
+ERROR - 2017-08-24 10:35:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-24 10:50:22 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-24 10:50:33 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-24 11:43:27 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-24 15:54:34 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-24 15:54:39 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-08-24 16:22:37 --> 404 Page Not Found: Res/images
+ERROR - 2017-08-24 16:22:39 --> 404 Page Not Found: c/Api/wifidog
+ERROR - 2017-08-24 16:22:46 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 177
+ERROR - 2017-08-24 16:23:28 --> 404 Page Not Found: c/Api/wifidog
+ERROR - 2017-08-24 16:26:38 --> 404 Page Not Found: c/Api/wifidog
+ERROR - 2017-08-24 16:30:15 --> 404 Page Not Found: /index
+ERROR - 2017-08-24 16:44:19 --> 404 Page Not Found: /index
+ERROR - 2017-08-24 16:44:44 --> 404 Page Not Found: c/Api/wifidog
+ERROR - 2017-08-24 16:45:37 --> 404 Page Not Found: c/Api/wifidog

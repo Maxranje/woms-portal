@@ -158,6 +158,27 @@ class Func {
 		}
 		return $this->db->insert_id();
 	}
+		// if($authid != 0){
+		// 	$query = "update authuser set logincount = logincount+1 where id = ?";
+		// 	$this->db->query ($query , array($authid));
+		// }
+		// // mm user filter
+		// $this->mredis->init();
+		// $uid = $this->mredis->getuserid($mac);
+		// if(!$uid) {
+		// 	$query = "insert into user (cid,apid,acctype,authid,uname,upass,createtime,hearttime,ip,mac,wanip,useragent) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+		// 	$res = $this->db->query ($query, array($cid, $apid, $acctype, $authid, $uname, $upass, time(),$hearttime,$ip, $mac, $wanip,$_SERVER['HTTP_USER_AGENT']));
+		// 	if(!$res || $this->db->affected_rows() == 0){
+		// 		throw new Exception ('新建登录用户信息失败, 用户类型'.$acctype);
+		// 	}
+		// 	$uid = $this->db->insert_id();
+		// 	$this->mredis->setuserid ($mac, $uid);
+		// }
+		// $userinfo = json_encode(array($cid, $apid, $acctype, $authid, $uname, $upass, time(), $hearttime, $ip, $mac, $wanip, $_SERVER['HTTP_USER_AGENT'] ));
+		// $this->mredis->setuserinfo ($uid, $userinfo);		
+		
+		// return $uid;
+	
 	
 
 	public function sec2time ($time){
@@ -236,6 +257,50 @@ class Func {
 			$response = $byte . " B";
 		}
 		return $response;
+	}
+
+
+	public function ldap ($username, $password, $cid){
+		try{
+			$res = $this->db->query("select * from ldap where cid = ?", array($cid));
+			if($res->num_rows() == 0){
+				throw new Exception ('LDAP服务尚未配置, 请联系管理员');
+			}
+			$ldap = $res->row_array();
+			$connect = ldap_connect($ldap['ldaphost'], $ldap['ldapport']) ;
+			if($connect === false){
+				throw new Exception ('链接ldap服务器失败');
+			}
+			ldap_set_option($connect, LDAP_OPT_PROTOCOL_VERSION, 3);
+			$state = ldap_bind($connect, $ldap['ldapusername'], $ldap['ldapuserpass']);
+			if(!$state){
+				throw new Exception("ldap绑定服务器失败");
+			}
+			$attr = explode(",", $ldap['attr']);
+			if(!is_array($attr)){
+				$attr = array('userPassword');
+			}
+			$result = ldap_search($connect, $ldap['dn'], $ldap['filter']."=".$username, $attr);
+			$entry = ldap_get_entries($connect, $result);
+			if(!$entry || $entry['count'] == 0){
+				throw new Exception("用户名密码不正确");
+			}
+			// test
+			$password = "{md5}".base64_encode(md5($password, 16));
+			if(isset($entry[0][strtolower($attr[0])])){
+				if($entry[0][strtolower($attr[0])][0] != $password){
+					throw new Exception("用户名密码不正确");
+				}
+			}else{
+				throw new Exception("用户名密码不正确");
+			}
+		}catch (Exception $ec){
+			if(isset($connect)){
+				ldap_close($connect);
+			}
+			return array('failed', $ec->getMessage());
+		}
+		return array("success", "success");
 	}
 
 

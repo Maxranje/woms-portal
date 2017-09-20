@@ -145,7 +145,7 @@ class Wbmanage extends CI_Model {
 			$content = strtoupper($content);
 			$datetime = strtotime($datetime);
 			if($datetime <= time()){
-				throw new Exception ("请求失败, 有效时间输入不正确, 错误码: WB1576");
+				throw new Exception ("创建失败, 当前日期不可以作为截至日期使用");
 			}
 
 			$this->db->trans_start();
@@ -190,7 +190,7 @@ class Wbmanage extends CI_Model {
 			$datetime = strtotime($datetime);
 			
 			if($datetime <= time()){
-				throw new Exception ("请求失败, 有效时间输入不正确, 错误码: WB1613");
+				throw new Exception ("创建失败, 当前日期不可以作为截至日期使用");
 			}
 
 			$this->db->trans_start();

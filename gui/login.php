@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 <meta charset="utf-8" />
 <title>Web Application</title>
+<meta name="renderer" content="webkit" />
 <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="shortcut icon" type="image/x-icon" href="/res/images/favicon.ico" media="screen" />
@@ -48,5 +49,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="/res/js/app.v2.js"></script>
 <script src="/res/js/parsley/parsley.min.js" cache="false"></script>
 <script src="/res/js/parsley/parsley.extend.js" cache="false"></script>
+<script type="text/javascript">
+var Chrome = window.navigator.userAgent.indexOf('Chrome/');
+var Firefox = window.navigator.userAgent.indexOf('Firefox/');
+var Ie = window.navigator.userAgent.indexOf('MSIE');
+if(Chrome != -1){
+    var v = window.navigator.userAgent.split('Chrome/');
+    if(parseFloat(v[1].substring(0,3)) < 49){
+        alert("浏览器版本不足以展示平台内容, 请升级到最新浏览器版本");
+    }
+}
+
+if(Firefox != -1){
+    var v = window.navigator.userAgent.split('Firefox/');
+    if(parseFloat(v[1].substring(0,3)) < 54){
+        alert("浏览器版本不足以展示平台内容, 请升级到最新浏览器版本");
+    }
+}
+if(Ie != -1){
+    var v = window.navigator.userAgent.split('MSIE');
+    if(parseFloat(v[1].substring(0,2)) < 11){
+        alert("浏览器版本不足以展示平台内容, 且不建议也不推荐使用IE浏览器");
+    }
+}
+</script>
 </body>
 </html>

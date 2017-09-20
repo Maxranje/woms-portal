@@ -39,13 +39,6 @@ include ('top.php');
 							</select>
 						</div>
 						<div class="form-group col-sm-2">
-							<select name="" class="form-control input-sm userprotocol">
-								<option class="text-muted" value="all">认证协议</option>
-								<option value="w">Wifidog</option>
-								<option value="p">Portal</option>
-							</select>
-						</div>
-						<div class="form-group col-sm-2">
 							<select name="" class="form-control input-sm apname">
 								<option class="text-muted" value="all">接入点</option>
 								<?php
@@ -60,10 +53,10 @@ include ('top.php');
 							<select name="" class="form-control input-sm usertype">
 								<option class="text-muted" value="all">用户类型</option>
 								<option value="n">一键认证</option>
-								<option value="c">帐号密码验证</option>
-								<option value="w">微信验证</option>
-								<option value="s">手机短信验证</option>
-								<option value="m">Mac白名单验证</option>
+								<option value="c">帐号认证</option>
+								<option value="w">微信认证</option>
+								<option value="s">短信认证</option>
+								<option value="m">MAC白名单认证</option>
 							</select>
 						</div>
 						<button class="btn btn-default btn-sm btn-filter">过滤</button>
@@ -78,21 +71,16 @@ include ('top.php');
 <div class="modal fade" id="info">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h4 class="modal-title">个人信息</h4></div>	
-    		<div class="modal-body">
-				<div class="m-b"> 
-			        <a class="list-group-item"><i class="fa fa-user icon-muted m-r-sm"></i> <span>登录用户名称:</span><span class="pi_name m-l font-bold"></span> </a>
-					<a class="list-group-item"><i class="fa fa-sitemap icon-muted m-r-sm"></i><span>登录验证类型:</span><span class="pi_type m-l font-bold"></span> </a>
-					<a class="list-group-item"><i class="fa fa-sort icon-muted m-r"></i><span>终端&nbsp;&nbsp;IP&nbsp;&nbsp;地址:</span><span class="pi_ip m-l font-bold"></span> </a>
-					<a class="list-group-item"><i class="fa fa-sort icon-muted m-r"></i><span>终端MAC地址:</span><span class="pi_mac m-l font-bold"></span> </a>					
-					<a class="list-group-item"><i class="fa fa-clock-o icon-muted m-r-sm"></i><span>开始使用时间:</span> <span class="pi_starttime m-l font-bold"></span></a>
-					<a class="list-group-item"><i class="fa fa-clock-o icon-muted m-r-sm"></i><span>结束使用时间:</span><span class="pi_endtime m-l font-bold"></span> </a>
-					<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>上行带宽总量:</span><span class="pi_upbyteall m-l font-bold"></span> </a>
-					<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>下行带宽总量:</span><span class="pi_downbyteall m-l font-bold"></span> </a>
-					<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>当次上行带宽:</span><span class="pi_upbyte m-l font-bold"></span> </a>
-					<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>当次下行带宽:</span><span class="pi_downbyte m-l font-bold"></span> </a>
-				</div>
+			<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h4 class="modal-title text-dark">个人信息</h4></div>	
+    		<div class="modal-body m-t-n">
+		        <a class="list-group-item"><i class="fa fa-user icon-muted m-r-sm"></i> <span>登录用户名称:</span><span class="pi_name m-l font-bold"></span> </a>
+				<a class="list-group-item"><i class="fa fa-sitemap icon-muted m-r-sm"></i><span>登录验证类型:</span><span class="pi_type m-l font-bold"></span> </a>
+				<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>上行带宽总量:</span><span class="pi_upbyteall m-l font-bold"></span> </a>
+				<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>下行带宽总量:</span><span class="pi_downbyteall m-l font-bold"></span> </a>
+				<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>当次上行带宽:</span><span class="pi_upbyte m-l font-bold"></span> </a>
+				<a class="list-group-item"><i class="fa fa-retweet icon-muted m-r-sm"></i><span>当次下行带宽:</span><span class="pi_downbyte m-l font-bold"></span> </a>
 			</div>
+			<footer class="modal-footer no-border"></footer>
 		</div>
 	</div>
 </div>	
@@ -140,11 +128,10 @@ function initTables (){
 				return '<a href="#" title="离线,'+value+'"><i class="fa fa-circle text-danger"></i></a>';	
 			}
 		}},
-		{field:'type', title:'登录类型', width:25,align:'center'},
-		{field:'protocol', title:'认证类型', width:20,align:'center'},
-		{field:'hearttime', title:'心跳时间',width:30, align:'center', formatter:function(value, row, index) {
-			return '<span class="text-dark"><i class="fa fa-heartbeat m-r-sm" aria-hidden="true"></i> ' + value+"</span>";
-		}},
+		{field:'type', title:'登录类型', width:15,align:'center'},
+		{field:'ip', title:'IP地址', width:15,align:'center'},
+		{field:'mac', title:'MAC地址', width:20,align:'center'},
+		{field:'starttime', title:'开始使用时间',width:25, align:'center'},
 		{field:'totaltime', title:'总使用时间', width:20,align:'center'},
 		{field:'more', title:'', width:6,align:'center', formatter:function (value, row, index) {
 			return '<a class="showinfo th-sortable" title="详细信息" onclick="showinfo('+row.id+')"><i class="fa fa-eye text-dark"></i></a>';
@@ -183,10 +170,6 @@ function showinfo (id, e) {
 		$('#info').modal('show');
 		$('.pi_name').html (data.info['name']);
 		$('.pi_type').html (data.info['type']);
-		$('.pi_mac').html (data.info['mac']);
-		$('.pi_ip').html (data.info['ip']);
-		$('.pi_starttime').html (data.info['starttime']);
-		$('.pi_endtime').html (data.info['endtime']);
 		$('.pi_upbyteall').html (data.info['allup']);
 		$('.pi_downbyteall').html (data.info['alldown']);
 		$('.pi_upbyte').html (data.info['userup']);

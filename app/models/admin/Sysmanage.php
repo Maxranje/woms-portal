@@ -31,8 +31,8 @@ class Sysmanage extends CI_Model {
 		$this->load_view('adc/sysnotice_list', $this->data);
 	}
 
-	public function get_sms_content_add_list (){
-		$this->load_view('adc/smscontentadd');
+	public function get_add_sys_notice_page (){
+		$this->load_view('adc/sysnotice_add');
 	}
 	
     /***
@@ -47,11 +47,16 @@ class Sysmanage extends CI_Model {
 			$page = intval($page);
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
+			$sc = $this->input->post('sc');
 
-			$sql = "select * from sysnotice where display = '1' order by addtime limit ?,? " ;
-			$res = $this->db->query($sql , array($page, $rows));
+			if($sc) {
+				$sql = "select * from sysnotice where display = '1' and title like ? order by addtime limit ?, ? " ;
+				$res = $this->db->query($sql , array('%'.$sc.'%', $page, $rows));
+			} else {
+				$sql = "select * from sysnotice where display = '1' order by addtime limit ?, ? " ;
+				$res = $this->db->query($sql , array($page, $rows));				
+			}
 			$result = $res->result_array();
-
 			$this->data['rows'] = array();
 			foreach ($result as $row) {
 				$array = array();
@@ -77,13 +82,14 @@ class Sysmanage extends CI_Model {
 			$title = $this->input->post('title'); 
 			$content = $this->input->post('msg');
 			if(!$title || !$content){
-				throw new Exception ('请求失败，错误码为：S1744');
+				throw new Exception ('请求无效, 公告标题或内容为空');
 			}
 			$query = "insert into sysnotice (type, title, content, addtime, display) value (?,?,?,?,?)";
 			$res = $this->db->query ($query, array('c', $title, $content, time(), '1' ));
 			if($this->db->affected_rows() == 0){
 				throw new Exception ('添加失败，错误码为：S1745');
 			}
+			$this->data['reson'] = "添加公告成功, 所有商户都会收到公告消息";
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";

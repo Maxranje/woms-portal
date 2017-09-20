@@ -32,6 +32,11 @@ class Portal extends CI_Model {
 			$this->data['url'] = $ap['customurl'];
 		}
 
+		if(isset($_SESSION['wxlogin']) && $_SESSION['wxlogin'] = "1"){
+			redirect($this->data['url']);
+			exit();			
+		}
+
 		if($ap['showad'] == '0'){
 			redirect($this->data['url']);
 			exit();

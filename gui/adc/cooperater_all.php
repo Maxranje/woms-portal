@@ -40,31 +40,19 @@ include ("top.php");
 <script src="/res/js/parsley/parsley.min.js" cache="false"></script>
 <script src="/res/js/parsley/i18n/zh_cn.js" cache="false"></script>
 <script type="text/javascript">
-G.set("remove_url", "/adc/corpmanage/corpremove")
-	.set('nav_name', 'allcooperater');
-
-var cid ;
+G.set("remove_url", "/adc/corpmanage/corpremove").set('nav_name', 'allcooperater');
 $(function (){
-	initTables ();
-
-	$('.btn-change-submit').on('click', function(){
-		if(!$('form').parsley().validate()){
-			return false;
-		}	
-		$.post('/adc/corpmanage/changepw', $('form').serialize(), function (data){
-			$('#changepw').modal('hide');
-			if(data.state == "failed"){
-				showTipMessageDialog ("<span class='text-danger font-bold'>"+data.reson+"</span>");
-			}
-		}, "json");
+	$('.btn-search').on('click', function (){
+		$('#table').datagrid('load',{sc: $('.searchbox').val()});
 	});
+	initTables ();
 });
 
 function initTables (){
 	var columns=[
 		{field:'id', title:'ID', align:'center', hidden:true},
-		{field:'cpun', title:'登录名称', width:40, align:'center'},		
 		{field:'nickname', title:'商家昵称', width:40, align:'center'},
+		{field:'cpun', title:'登录名称', width:40, align:'center'},		
 		{field:'industry', title:'行业', width:40,align:'center'},
 		{field:'name_manager', title:'负责人',width:40, align:'center'},
 		{field:'phone', title:'负责人电话',width:40, align:'center'},

@@ -383,6 +383,7 @@ class Apmanage extends CI_Model {
 			$smskey = $this->input->post('smskey');
 			$smssecret = $this->input->post('smssecret');
 			$smstemplate = $this->input->post('smstemplate');
+			$authserver = $this->input->post('authserver');
 			$apid = $this->input->post('apid');     
 
 			if (!$apid) {
@@ -390,7 +391,15 @@ class Apmanage extends CI_Model {
 			}	
 			if ($apid != $_SESSION['apid']){
 				throw new Exception("请求失败, 未知接入点配置, 错误码: 407");
-			}	
+			}
+
+			if ($authserver == 'l'){
+				$res = $this->db->query ("select lid from ldap where cid = ?", array($_SESSION['cid']));
+				if($res->num_rows() == 0){
+					throw new Exception("请求失败, LDAP服务器未配置, 请先添加LDAP服务器, 错误码: 4099");
+				}
+			}
+
 			$wxlogin = !$wxlogin ? '0' : '1';
 			$showad = !$showad ? '0' : '1';
 			$bindvalidatetime = 9999999999;
@@ -417,8 +426,8 @@ class Apmanage extends CI_Model {
 			}
 
 			$this->db->trans_start();
-			$query = "update apconfig set authtype=?, wxloginable=?, customurl=?, showstatuspage=?, showad=?,  bindmac=?, bindvalidatetime=?, smstid=?,smskey=?, smssecret=?, smstemplate=? where apid = ?";
-			$res = $this->db->query($query, array( $authtype, $wxlogin, $customurl, $showstatuspage, $showad, $bindmac,$bindvalidatetime, $smsid, $smskey, $smssecret, $smstemplate,$apid));
+			$query = "update apconfig set authtype=?, wxloginable=?, customurl=?, showstatuspage=?, showad=?,  bindmac=?, bindvalidatetime=?, smstid=?,smskey=?, smssecret=?, authserver=?, smstemplate=? where apid = ?";
+			$res = $this->db->query($query, array( $authtype, $wxlogin, $customurl, $showstatuspage, $showad, $bindmac,$bindvalidatetime, $smsid, $smskey, $smssecret, $authserver,$smstemplate,$apid));
 			if(!$res){   
 				throw new Exception ("配置热点基本信息失败, 请重试");
 			}

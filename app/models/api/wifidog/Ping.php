@@ -5,7 +5,7 @@ class Ping extends CI_Model {
 	public function __construct(){
 		parent::__construct();
 		$this->load->database();
-		//$this->load->library('mredis');
+		$this->load->library('mredis');
 		$this->data = array('state'=>'success', 'reson'=>'Mission Complete');
 	}
 	public function index (){
@@ -40,9 +40,9 @@ class Ping extends CI_Model {
 			}
 			$t = time();
 			$t = $t-50;
-			// $info = implode(" ", array($t, $sys_uptime, $sys_memfree, $sys_load, $wifidog_uptime));
-			// $this->mredis->update_ping_info($ap['apid'], $info);
-
+			// $json = json_encode(array($ap['apid'],$t,$sys_uptime,$sys_memfree,$sys_load,$wifidog_uptime));
+			// $this->mredis->init();
+			// $this->mredis->dev_ping($ap['apid'], $json);
 			$query="insert into apstatus (`apid`,`time`,`sys_uptime`,`sys_memfree`,`sys_load`,`wifidog_uptime`) values (?,?,?,?,?,?)";
 			$this->db->query($query, array($ap['apid'], $t, $sys_uptime, $sys_memfree, $sys_load, $wifidog_uptime));
 

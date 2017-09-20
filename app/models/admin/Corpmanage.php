@@ -57,7 +57,7 @@ class Corpmanage extends CI_Model {
 			$page = ($page - 1) * $rows;
 			if($sc) {
 				$sql = "select * from cooperater where nickname like ? or cpun like ? order by createtime limit ?,?";
-				$res = $this->db->query($sql , array('%'.$sc.'%', $page, $rows));
+				$res = $this->db->query($sql , array('%'.$sc.'%','%'.$sc.'%', $page, $rows));
 			} else {
 				$sql ="select * from cooperater order by createtime limit ?,?";				
 				$res = $this->db->query($sql , array($page, $rows));				
@@ -94,7 +94,7 @@ class Corpmanage extends CI_Model {
 			$page = ($page - 1) * $rows;
 			if($sc) {
 				$sql = "select c.*, (select count(a.apid) from ap a where a.cid = c.cid) count from cooperater c where c.nickname like ? or c.cpun like ? order by c.createtime limit ?,?";
-				$res = $this->db->query($sql , array('%'.$sc.'%', $page, $rows));
+				$res = $this->db->query($sql , array('%'.$sc.'%', '%'.$sc.'%', $page, $rows));
 			} else {
 				$sql ="select c.*, (select count(a.apid) from ap a where a.cid = c.cid) count from cooperater c order by c.createtime limit ?,?";				
 				$res = $this->db->query($sql , array($page, $rows));				
@@ -128,7 +128,7 @@ class Corpmanage extends CI_Model {
 			$cid = $this->input->post('id'); 
 			$count = $this->input->post('count');
 			if(!$cid || !$count ){
-				throw new Exception("请求无效, 操作失败");
+				throw new Exception("请求无效, 请确认是否填写规范的授权数量");
 			}
 
 			$count = intval($count);
@@ -151,7 +151,7 @@ class Corpmanage extends CI_Model {
 
 			$query = "update cooperater set apcountgrant = ? where cid = ?";			
 			$res = $this->db->query($query , array($count, $cid));
-			$this->data['reson'] = "授权成功";
+			$this->data['reson'] = "授权商家可创建接入点数量成功";
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";
@@ -166,15 +166,16 @@ class Corpmanage extends CI_Model {
 			$apid = $this->input->post('id'); 
 			$count = $this->input->post('count');
 			if(!$apid || !$count ){
-				throw new Exception("请求无效, 操作失败");
+				throw new Exception("请求无效, 请确认是否填写规范的授权数量");
 			}
-
+			$res = $this->db->query("select apname from ap where apid = ?", array($apid));
+			if ($res->num_rows() == 0){
+				throw new Exception("请求无效, 该接入点不存在, 请确认");
+			}
+			$ap = $res->row_array();
 			$count = intval($count);
-			// 比对系统授权参数
-
-			$query = "update apconfig set usecountgrant = ? where apid = ?";			
-			$res = $this->db->query($query , array($count, $apid));
-			$this->data['reson'] = "授权成功";
+			$res = $this->db->query("update apconfig set usecountgrant = ? where apid = ?", array($count, $apid));
+			$this->data['reson'] = "授权接入点{$ap['apname']}用户数成功";
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";
@@ -218,46 +219,41 @@ class Corpmanage extends CI_Model {
 				throw new Exception("请求无效, 操作失败");
 			}
 
-			$query = "select * from cooperater where cid = ?";
-			$res = $this->db->query ($query, array($cid));
-			if($res->num_rows == 0){
+			$this->db->trans_start();
+
+			$res = $this->db->query ("select cid from cooperater where cid = ?", array($cid));
+			if($res->num_rows() == 0){
+				$this->data['query'] = $this->db->last_query();
 				throw new Exception("该商户不存在， 无法删除");
 			}	
 
-			$query = "delete from ap where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete from cooperater where cid = ?" , array($cid));
 
-			$query = "delete from apconfig where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete a,ac from ap a, apconfig ac where a.cid = ? and ac.apid= a.apid" , array($cid));
 			$this->data['reson'] .= "删除商户所有接入点成功</br>";
 			
-			$query = "delete from usedlog where uid in (select uid from user where cid = ?)";
-			$res = $this->db->query($query , array($cid));
-			$query = "delete from user where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete ul, u from usedlog ul, user u where u.cid = ? and u.uid = ul.uid" , array($cid));
 			$this->data['reson'] .= "删除商户认证信息成功</br>";
 
-			$query = "delete from smstemplate where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete from smstemplate where cid = ?" , array($cid));
 			$this->data['reson'] .= "删除商户短信认证模版成功</br>";
 
-			$query = "delete from template where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete from template where cid = ?" , array($cid));
 			$this->data['reson'] .= "删除商户认证模版成功</br>";
 
-			$query = "delete from whitelist where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete from whitelist where cid = ?" , array($cid));
 			$this->data['reson'] .= "删除商户白名单成功</br>";
 
-			$query = "delete from blacklist where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete from blacklist where cid = ?" , array($cid));
 			$this->data['reson'] .= "删除商户黑名单成功</br>";
 
-			$query = "delete from cooperater where cid = ?";
-			$res = $this->db->query($query , array($cid));
+			$res = $this->db->query("delete from cooperater where cid = ?" , array($cid));
 			$this->data['reson'] .= "删除商户基本信息成功</br>";
+
+			$this->db->trans_commit();
 		}
 		catch (Exception $ec) {
+			$this->db->trans_rollback();
 			$this->data["state"] = "failed";
 			$this->data["reson"] .= $ec->getMessage();
 		}

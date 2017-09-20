@@ -5,7 +5,6 @@ class Mredis {
 
 	public function __construct (){
 		$this->ci = & get_instance ();
-		$this->init();
 	}
 
 	public function init (){
@@ -13,8 +12,24 @@ class Mredis {
 		$this->redis->connect('127.0.0.1', 6379);
 	}
 
-	public function update_ping_info ($apid, $info){
-		$this->redis->hset("ping", $apid, $info);
+	public function dev_ping ($apid, $info){
+		$this->redis->hset("devping", $apid, $info);
+	}
+
+	# 返回
+	public function getuserinfo ($uid){
+		return $this->redis->hget('authuser', $uid);
+	}
+	public function setuserinfo ($uid, $info){
+		return $this->redis->hset('authuser', $uid, $info);
+	}
+
+	public function getuserid ($mac) {
+		return $this->redis->hget('usermapping', $mac);
+	}
+
+	public function setuserid ($mac, $id){
+		$this->redis->hset('usermapping', $mac, $id);
 	}
 
 }

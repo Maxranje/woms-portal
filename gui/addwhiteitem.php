@@ -82,7 +82,7 @@ $('.btn-next').on('click', function (){
 		return false;
 	}	
 	zy.send_sync_ajax('/corp/wboptions/addwhite', $('form').serialize(), function (data){
-		showTipMessageDialog(data.reson,data.state, "Message", "/corp/authwhitelist");
+		showTipMessageDialog(data.reson,data.state, "提示信息", "/corp/authwhitelist");
 	});
 });
 

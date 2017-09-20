@@ -74,6 +74,11 @@ class Corp extends CI_Controller {
 		$this->model->get_edit_validate_page();	
 	}
 
+	public function authserverconf (){
+		$this->load->model ('cooperater/authmanage', "model");
+		$this->model->get_auth_server_conf_page();	
+	}	
+
 	public function authblacklist (){
 		$this->load->model ('cooperater/wbmanage', "model");
 		$this->model->get_black_list_page();			

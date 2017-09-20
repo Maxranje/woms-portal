@@ -42,6 +42,13 @@ class Authmanage extends CI_Model {
 		$this->load_view('editvalidate', $this->data);
 	}
 
+	public function get_auth_server_conf_page (){
+		$res = $this->db->query ("select * from ldap where cid = ?", array($_SESSION['cid']));
+		$result = $res->row_array();
+		$this->data['asc'] = $result;
+		$this->load_view('authserverconf', $this->data);
+	}
+
     /***
         *******************************************
         *          get ajax data                  *
@@ -132,7 +139,7 @@ class Authmanage extends CI_Model {
 			}
 			$validatetime = strtotime($validatetime);
 			if($validatetime <= time()){
-				throw new Exception ("请求失败, 有效时间输入错误, 错误码: A1668");
+				throw new Exception ("创建失败, 当前日期不可以作为截至日期使用");
 			}
 			$this->db->trans_start();
 			
@@ -207,6 +214,47 @@ class Authmanage extends CI_Model {
 		}
 		echo json_encode($this->data);
 		exit();
+	}
+
+	public function ldapauth (){
+		try{
+			$ldaphost = $this->input->post('ldaphost');
+			$ldapport = $this->input->post('ldapport');
+			$ldapusername = $this->input->post('ldapusername');
+			$ldapuserpass = $this->input->post('ldapuserpass');
+			$ldapfilter = $this->input->post('ldapfilter');
+			$ldapattr = $this->input->post('ldapattr');
+			$ldapdn = $this->input->post('ldapdn');
+
+			if(!$ldaphost || !$ldapport || !$ldapusername || !$ldapuserpass || !$ldapdn ||!$ldapattr || !$ldapfilter){
+				throw new Exception("请求失败, ldap服务器配置参数没有配全, 请检查");
+			}
+
+			$this->db->trans_start();
+			
+			$res = $this->db->query('select lid from ldap where cid = ?', array($_SESSION['cid']));
+
+			if ($res->num_rows() == 0){
+				$query = "insert into ldap (ldaphost,ldapport, ldapusername, ldapuserpass, dn, filter, attr, cid) value (?,?, ?,?,?,?,?,?)";
+			}else{
+				$result = $res->row_array();
+				$query = "update ldap set ldaphost=?,ldapport=?, ldapusername=?, ldapuserpass=?, dn=?, filter=?, attr=? where cid =?";
+			}
+
+			$tt = $this->db->query($query, array($ldaphost,$ldapport, $ldapusername,$ldapuserpass,$ldapdn, $ldapfilter, $ldapattr, $_SESSION['cid']));
+			if(!$tt) {   
+				throw new Exception ("配置LDAP服务器参数失败， 更新数据失败");
+			}
+			$this->db->trans_commit();
+			$this->data['reson'] = "配置LDAP服务器参数成功";
+
+		} catch(Exception $ec) { 
+			$this->db->trans_rollback();  			
+			$this->data['reson']=$ec->getMessage();
+			$this->data['state']="failed";		
+		}
+		echo json_encode($this->data);
+		exit();		
 	}
 }
 ?>

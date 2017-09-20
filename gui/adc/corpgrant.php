@@ -40,7 +40,9 @@ include ("top.php");
 G.set('nav_name', 'corpgrant');
 
 $(function (){
-
+	$('.btn-search').on('click', function (){
+		$('#table').datagrid('load',{sc: $('.searchbox').val()});
+	});
 	initTables ();
 });
 
@@ -52,7 +54,9 @@ function initTables (){
 		{field:'name_manager', title:'负责人',width:40, align:'center'},
 		{field:'phone', title:'负责人电话',width:40, align:'center'},
 		{field:'aps', title:'当前热点数',width:40, align:'center'},
-		{field:'apcountgrant', title:'授权热点数',width:40, align:'center'},
+		{field:'apcountgrant', title:'授权热点数',width:40, align:'center',formatter:function (value, row, index) {
+			return '<span class="text-danger font-bold">'+value+'</span>';
+		}},
 		{field:'grant2', title:'授权接入点数', width:60,align:'center', formatter:function (value, row, index) {
 			return '<input type="text" style="width:80px;"><button  class="m-l-xs" onclick="corp_grant('+row.id+', event)">授权</button>';}
 		}	

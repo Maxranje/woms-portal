@@ -65,6 +65,11 @@ class Adc extends CI_Controller {
 		$this->model->get_sys_notice_page();			
 	}
 
+	public function addsysnotice (){
+		$this->load->model ('admin/sysmanage', "model");
+		$this->model->get_add_sys_notice_page();			
+	}	
+
 
 	public function templatelist (){
 		$this->load->model ('admin/tmpmanage', "model");
@@ -76,7 +81,12 @@ class Adc extends CI_Controller {
 		$this->model->get_tmp_grant_page();			
 	}
 
-
+	public function logout() {
+		setcookie("PHPSESSID", "", time()-3600);
+		unset($_SESSION);
+		session_destroy();
+		redirect("/adc/login", "login", 302);
+	}
 
 	public function check_adc_login_state () {
 		if(count($this->uri->segment_array()) > 2 ) {

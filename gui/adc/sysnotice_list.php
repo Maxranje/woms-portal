@@ -13,12 +13,12 @@ include ('top.php');
 						<div class="col-sm-8 m-b-xs">
 							<div class="btn-group">		
 								<a class="btn btn-sm btn-default m-r-sm refresh" ><i class="fa fa-refresh"></i></a>
-								<a class="btn btn-sm btn-default m-r-sm btn-add m-l-sm" ><i class="fa fa-plus m-r-sm"></i>添加</a>
+								<a class="btn btn-sm btn-default m-r-sm btn-add m-l-sm" href="/adc/addsysnotice" ><i class="fa fa-plus m-r-sm"></i>添加</a>
 							 </div>
 						</div>
 						<div class="col-sm-4 m-b-xs">
 							<div class="input-group">
-								<input type="text" class="input-sm form-control searchbox" placeholder="公告内容模糊检索">		
+								<input type="text" class="input-sm form-control searchbox" placeholder="公告标题模糊检索">		
 								<span class="input-group-btn"><button class="btn btn-sm btn-default btn-search" type="button"><i class="fa fa-search"></i></button></span> 	
 							</div>
 						</div>
@@ -45,11 +45,9 @@ G.set('nav_name', 'systemnotice').set('remove_url', "/adc/sysmanage/removenotice
 $(function (){
 
 	$('.btn-search').on('click', function (){
-		var sc = $('.searchbox').val();
-		var state = $('.statefilter').val();
-		var corp = $('.corpfilter').val();
-		$('#table').datagrid('load',{sc: sc, state:state, corp:corp});
+		$('#table').datagrid('load',{sc: $('.searchbox').val()});
 	});
+
 	$('.btn-filter').on('click', function (){
 		var sc = $('.searchbox').val();
 		var state = $('.statefilter').val();

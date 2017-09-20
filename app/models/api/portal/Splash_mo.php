@@ -5,6 +5,7 @@ class Splash_mo extends CI_Model {
 	public function __construct(){
 		parent::__construct();
 		$this->load->database();
+		$this->load->library('func');
 		$this->data = array('state'=>'success', 'reson'=>'Mission Complete', 'tmp'=>'');
 	}
 
@@ -24,8 +25,8 @@ class Splash_mo extends CI_Model {
 				throw new Exception("系统默认参数不正确， 请确定是否是连接规定设备");
 			}
 
-			$query = "select ap.*, ac.* from ap a, apconfig ac where a.apid = ac.apid and a.apname = ? and a.wlanip = ?";
-			$res = $this->db->query ($query, array($wlanacname, $wlanip));
+			$query = "select a.*, ac.* from ap a, apconfig ac where a.apid = ac.apid and a.apname = ? and a.wanip = ?";
+			$res = $this->db->query ($query, array($wlanacname, $wlanacip));
 			if(!$res){
 				throw new AppException('System abnormal, please contact administrator');
 			}

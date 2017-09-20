@@ -110,11 +110,11 @@ class Splash_mo extends CI_Model {
 				# WeChat scan code authentication
 				$authtype = null;
 				$authcode = null;
-				if (isset($_GET[$url]) && !empty($url)){
+				if (isset($url) && !empty($url)){
 					if (strpos($url, "wxcode") != false){
 						$wxcode = explode ('wxcode=', urldecode($url));
 						if($wxcode[1]){
-							$wxcode = explode ('&', $wxcode);
+							$wxcode = explode ('&', $wxcode[1]);
 							$authtype = 'w';
 							$authcode = $wxcode[0];
 						}
@@ -122,8 +122,11 @@ class Splash_mo extends CI_Model {
 				}
 
 				if($authcode && $authtype == 'w'){
+					if(!$ap['wxloginable']){
+						throw new Exception("微信认证功能未开启, 无法使用微信进行认证");
+					}
 					$sql = "select t.*, wf.* from wxtoken t, wxfuns wf where t.cid = ? and t.type=? and t.token =? and t.openid = wf.openid";
-					$res = $this->db->query ($sql, array($_SESSION['cid'], $authtype, $authcode));
+					$res = $this->db->query ($sql, array($ap['cid'], $authtype, $authcode));
 					if(!$res || $res->num_rows() == 0){
 						throw new AppException ('微信认证参数不正确', "token=".$authcode);
 					}
@@ -140,6 +143,7 @@ class Splash_mo extends CI_Model {
 					$token = $this->func->addtoken ($uid, $ap['apid'], 'w', $clientip, $clientmac);	
 					
 					$_SESSION['loginable'] = 'login';
+					$_SESSION['wxlogin'] = '1';
 					$redirtoken='http://'.$gw_address.':'.$gw_port.'/wifidog/auth?token='.$token.'&url='.$url;
 					redirect($redirtoken, 'auto', 302);
 				}
@@ -189,25 +193,34 @@ class Splash_mo extends CI_Model {
 						if (!$authname || !$authpass){
 							throw new Exception ('用户名或密码输入错误, 请重新认证');
 						}
-						$query = "select * from authuser where uname = ? and upasswd =? and ( apid = ? or apid = 0 ) ";
-						$res = $this->db->query($query, array($authname, $authpass, $ap['apid']));
-						if(!$res || $res->num_rows () == 0){
-							throw new Exception ('用户名或密码输入错误, 请重新认证');
-						}
-						$authuser = $res->row_array ();		
-						if($authuser['state'] == "0"){
-							throw new Exception ('该账户处于无效状态，请使用其他帐号登录');
-						}
-						if($authuser['expiredate'] <= time()){
-							throw new Exception ('该账户已过有效期，请使用其他帐号登录');
-						}	
-						if($authuser['mutilogin'] == '1'){
-							$query = "select count(*) count from user where apid =? and uid = ? and state = '1' group by uid";
-							$res = $this->db->query ($query, array($ap['apid'], $authuser['id']));
-							$result = $res->row_array ();	
-							if(($result['count'] >= intval($authuser['mutilcount'])) ){
-								throw new Exception ('该账户多人登录以达到上限， 请重新更换账户登录');	
+						if($ap['authserver'] == 'l'){
+							list($state, $reson) = $this->func->ldap($authname, $authpass, $ap['cid']);
+							log_message('error', $state." -- ".$reson);
+							if ($state == "failed"){
+								throw new Exception($reson);
 							}
+							$authuser = array('id'=>0);
+						} else if($ap['authserver'] == 's'){
+							$query = "select * from authuser where uname = ? and upasswd =? and ( apid = ? or apid = 0 ) ";
+							$res = $this->db->query($query, array($authname, $authpass, $ap['apid']));
+							if(!$res || $res->num_rows () == 0){
+								throw new Exception ('用户名或密码输入错误, 请重新认证');
+							}
+							$authuser = $res->row_array ();		
+							if($authuser['state'] == "0"){
+								throw new Exception ('该账户处于无效状态，请使用其他帐号登录');
+							}
+							if($authuser['expiredate'] <= time()){
+								throw new Exception ('该账户已过有效期，请使用其他帐号登录');
+							}	
+							if($authuser['mutilogin'] == '1'){
+								$query = "select count(*) count from user where apid =? and uid = ? and state = '1' group by uid";
+								$res = $this->db->query ($query, array($ap['apid'], $authuser['id']));
+								$result = $res->row_array ();	
+								if(($result['count'] >= intval($authuser['mutilcount'])) ){
+									throw new Exception ('该账户多人登录以达到上限， 请重新更换账户登录');	
+								}
+							}							
 						}
 
 						$this->db->trans_start();

@@ -53,7 +53,7 @@ include ('top.php');
 							<input type="text" class="form-control input-sm" name="qq"  value="<?=$corp['qq']?>">
 						</div>
 					</form>
-					<button type="submit" class="btn btn-sm btn-default btn-next m-t">Submit</button>
+					<button type="submit" class="btn btn-sm btn-default btn-next m-t">保存</button>
 				</div>
 			</section>
 		</section>
@@ -72,12 +72,7 @@ $('.btn-next').on('click', function (){
 		return false;
 	}	
 	zy.send_sync_ajax('/adc/corpmanage/editcorp', $('form').serialize(), function (data){
-		
-		if(data.state == "failed" ){
-			showTipMessageDialog(data.reson, data.state);
-		}else{
-			window.location.href = "/adc/allcooperater";
-		}
+		showTipMessageDialog(data.reson, data.state, "提示信息", "/adc/allcooperater");
 	});
 });
 </script>

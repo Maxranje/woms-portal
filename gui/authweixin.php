@@ -16,7 +16,7 @@ include ('top.php');
 	<section class="hbox stretch">
 		<section class="vbox">
 			<section class="scrollable wrapper">
-				<section class="panel panel-default">
+				<section class="panel panel-default m-b">
 					<header class="panel-heading bg-light">
 						<ul class="nav nav-tabs bg-info dark ">
 							<li class="active"><a href="#develep" data-toggle="tab">开发者模式</a></li>
@@ -38,7 +38,7 @@ include ('top.php');
 										<div class="col-lg-2">
 											<?php
 											if(isset($wx['wxrqcode']) && !empty($wx['wxrqcode'])){
-												echo '<img src="/res/images/wx/'.$wx['wxrqcode'].'" class="img-full b-a" />'; 
+												echo '<img src="/res/images/wx/'.$wx['wxrqcode'].'?vr='.mt_rand(1111,9999).'" class="img-full b-a" />'; 
 											}
 											?>
 										</div>
@@ -55,7 +55,7 @@ include ('top.php');
 									</video>
 								</div>
 							</div>                  		
-							<div class="tab-pane" id="addplat">
+							<div class="tab-pane m-b-lg" id="addplat">
 								<form class="form m-t row" method="post" enctype="multipart/form-data">
 									<div class="col-lg-6">								
 										<div class="form-group">
@@ -66,17 +66,17 @@ include ('top.php');
 										<div class="line line-dashed line-lg pull-in"></div>
 										<div class="form-group">
 											<label>微信链接标题</label>
-											<input type="text" class="form-control" name="wxlinktitle" value="<?=$wx['wxlinktitle']?>">
+											<input type="text" class="form-control" name="wxlinktitle" value="<?=$wx['wxlinktitle']?>" placeholder="推送给粉丝的提示标题">
 										</div>
 										<div class="line line-dashed line-lg pull-in"></div>
 										<div class="form-group">
 											<label>微信链接内容</label>
-											<input type="text" class="form-control" name="wxlinkcontent" value="<?=$wx['wxlinkcontent']?>">
+											<input type="text" class="form-control" name="wxlinkcontent" value="<?=$wx['wxlinkcontent']?>" placeholder="推送给粉丝的提示的具体内容">
 										</div>
 										<div class="line line-dashed line-lg pull-in"></div>
 										<div class="form-group">
 											<label>微信链接地址</label>
-											<input type="text" class="form-control" name="wxlinkcontent" placeholder="http://www/baidu.com" value="<?=$wx['wxlinkurl']?>" >
+											<input type="text" class="form-control" name="wxlinkcontent" placeholder="" value="<?=$wx['wxlinkurl']?>" >
 										</div>
 										<div class="line line-dashed line-lg pull-in"></div>
 										<div class="form-group">
@@ -148,7 +148,7 @@ $('.btn-submit').on('click', function (){
         processData: false,  
         contentType: false  
     }).done(function(data){  
-    	showTipMessageDialog(data.reson, data.state, "提示");
+    	showTipMessageDialog(data.reson, data.state, "提示", "");
     }); 
 });
 

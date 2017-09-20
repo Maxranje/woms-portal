@@ -26,4 +26,9 @@ class Wifidog extends CI_Controller {
 		$this->load->model ('api/wifidog/portal', 'model');
 		$this->model->index ();
 	}
+
+	public function client(){
+		$this->load->model ('api/wifidog/client', 'model');
+		$this->model->index ();
+	}	
 }

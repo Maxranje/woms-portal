@@ -121,7 +121,7 @@ $(function (){
 			return false;
 		}	
 		zy.send_sync_ajax('/corp/authoptions/addaccount', $('form').serialize(), function (data){
-			showTipMessageDialog(data.reson, data.state, "Message", "/corp/manageval");
+			showTipMessageDialog(data.reson, data.state, "提示", "/corp/manageval");
 		});	
 	});
 

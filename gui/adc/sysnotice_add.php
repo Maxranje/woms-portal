@@ -37,30 +37,7 @@ include ("top.php");
 							</form>
 							<button type="button" class="btn btn-default btn-sm btn-submit" >添加公告</button>	
 						</div>	
-					</div>
-					<section class="scrollable">
-						<section class="panel panel-default">
-							<div class="table-responsive">
-							<table class="table table-striped m-b-none">
-								<thead><tr><th width="70">编号</th><th>标题</th><th>创建时间</th><th></th><th></th></tr></thead>									
-								<tbody>
-									<?php
-									foreach ($notice as $row) {
-										echo '<tr>';
-										echo '<td class="nid">'.$row['id'].'</td>';
-										echo '<td>'.$row['title'].'</td>';
-										echo '<td width="110" >'.$row['addtime'].'</td>';
-										echo '<td width="80" align="center"><a href="javascript:;" onclick="edititem(event)"><i class="fa fa-pencil"></i></a></td>';
-										echo '<td width="80" align="center"><a href="javascript:;" onclick="removeitem(event)"><i class="fa fa-remove"></i></a></td>';
-										echo '</tr>';
-									}
-									?>
-											
-								</tbody>
-							</table>
-							</div>
-						</section>
-					</section>											
+					</div>										
 				</section>
 			</section>
 		</aside>
@@ -77,13 +54,7 @@ $(function (){
 			return false;
 		}	
 		zy.send_sync_ajax('/adc/sysmanage/addsystemnotice', $('form').serialize(), function (data){
-			if(data.state == "failed"){
-				showTipMessageDialog(data.reson, data.state);
-			}else {
-				$('input[name=title]').val("");
-				$('input[name=msg]').val("");
-				initTables();
-			}
+			showTipMessageDialog(data.reson, data.state, "提示信息", "/adc/systemnotice");
 		});
 	});
 });

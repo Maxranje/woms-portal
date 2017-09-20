@@ -30,7 +30,7 @@ class Cooperater extends CI_Model {
                 throw new Exception ("校验参数不正确");
             }
 
-            $sql = "select cid, logo from cooperater where cpun = ? and cppw = ?";
+            $sql = "select cid, logo from cooperater where binary cpun = ? and cppw = ?";
             $res = $this->db->query ($sql, array($username, $password));
             if(!$res || $res->num_rows() == 0) {
                 throw new Exception ('用户名密码错误');

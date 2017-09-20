@@ -59,7 +59,7 @@ include ('top.php');
 						<div class="form-group">
 							<img src="/res/images/corplogo/<?=$cpt['logo']?>" class="thumb b-a">
 						</div>																								
-						<button type="submit" class="btn btn-sm btn-default btn-next m-t">Submit</button>
+						<button type="submit" class="btn btn-sm btn-default btn-next m-t">保存</button>
 					</form>
 				</div>
 			</section>

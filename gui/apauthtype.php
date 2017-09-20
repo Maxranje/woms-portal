@@ -63,7 +63,7 @@ include ('top.php');
 						<p class="m-t">浏览广告 </p>
 						<div class="row checkbox m-t-md">
 							<label class="checkbox-custom col-lg-7"><input type="checkbox" name="showad" <?php if($ap['showad']== '1'){ echo "checked='checked'" ;} ?>><i class="fa fa-fw fa-square-o"></i> 
-								<span class="font-bold text-info m-l-sm">（终端是否浏览广告, 该功能仅适用于自定义模板, 公共模板忽略该功能）</span> 
+								<span class="font-bold text-danger dker m-l-sm h6">（浏览广告, 该功能仅适用于自定义模板, 公共模板及第三方认证不提供该功能）</span> 
 							</label>
 						</div>  							 					
 					</div>
@@ -106,6 +106,20 @@ include ('top.php');
 						</div>
 					</div>    
 				</section>
+				<section class="panel panel-default m-t userpanel d-n">
+					<header class="panel-heading">认证服务器</header>
+					<div class="panel-body">
+						<p class="m-t">用户名密码认证服务器 </p>
+						<div class="form-group m-l-n-md m-t-n-xs05 row">
+							<div class="col-sm-6">
+								<select class="form-control text-mt m-b authserver" name="authserver">
+									<option value="s" <?php if($ap['authserver']== 's'){ echo "selected='selected'" ;} ?>>系统默认认证</option>
+									<option value="l" <?php if($ap['authserver']== 'l'){ echo "selected='selected'" ;} ?>>LDAP认证服务器</option>
+								</select>
+							</div>
+						</div>  							 					
+					</div>
+				</section>				
 			</form>
 			<button class="btn btn-success btn-sm m-r-sm btn-save">完成</button>
 			<a class="btn btn-default btn-sm m-r-sm btn-next" href="/corp/apauthtmp">高级配置</a>
@@ -128,6 +142,8 @@ $(function (){
 
 	if($('input[type=radio]:checked').val() == '2'){
 		$('.smspanel').removeClass('d-n');
+	}else if($('input[type=radio]:checked').val() == '1'){
+		$('.userpanel').removeClass('d-n');
 	}
 
 	$('input[type=radio]').change(function (){
@@ -137,6 +153,14 @@ $(function (){
 			$('.smspanel').addClass('d-n');
 		}
 	});
+
+	$('input[type=radio]').change(function (){
+		if( $(this).val() == 1 ){
+			$('.userpanel').removeClass('d-n');
+		}else{
+			$('.userpanel').addClass('d-n');
+		}
+	});	
 
 	$(".showstatuspage").change(function (){
 		if($(this).val() == 'c'){

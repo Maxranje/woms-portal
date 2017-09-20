@@ -73,3 +73,6 @@ $route['c/api/portal/([a-z]+)'] = 'c/portal/$1';
 
 # 第三方登录
 $route['c/api/thlogin/([a-z]+)'] = 'c/thlogin/$1';
+
+# 僵尸用户
+$route['c/api/client/([a-z]+)'] = 'c/client/$1';

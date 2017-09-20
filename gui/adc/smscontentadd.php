@@ -25,10 +25,10 @@ include ('top.php');
 							<textarea class="form-control text-mt " rows="6" data-minwords="6" data-parsley-required="true"  data-parsley-length="[12,64]" name="smscontent" ></textarea>
 						</div>
 						<div class="line line-dashed line-lg pull-in"></div>   
-						<div class="alert alert-danger font-bold m-t-lg h6">
+						<div class="alert alert-info font-bold m-t-lg h6">
 							<p>温馨提示：</p>
 							<p>1. 验证码内容最大64字 (英文字母、标点符号也算一个字)</p>
-							<p>2. 生成的验证码用 {verifycode} 表示</p>
+							<p>2. 生成的验证码用 <span class="font-bold text-danger">{verifycode}</span>  表示</p>
 							<p>3. 内容示例：欢迎使用XX无线网络，你的短信验证码是{verifycode}，谢谢。</p>
 						</div>
 					</form>

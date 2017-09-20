@@ -1,0 +1,41 @@
+ERROR - 2017-09-05 14:59:08 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 14:59:08 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-05 14:59:12 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 14:59:20 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-05 14:59:25 --> Query error: Unknown column 'id' in 'field list' - Invalid query: select id from cooperater where cid = '6'
+ERROR - 2017-09-05 14:59:26 --> Query error: Unknown column 'id' in 'field list' - Invalid query: select id from cooperater where cid = '6'
+ERROR - 2017-09-05 14:59:28 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 14:59:46 --> Query error: Unknown column 'id' in 'field list' - Invalid query: select id from cooperater where cid = '6'
+ERROR - 2017-09-05 15:00:46 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 15:01:37 --> Query error: Unknown column 'cid' in 'where clause' - Invalid query: delete from apconfig where cid = '7'
+ERROR - 2017-09-05 15:02:34 --> Query error: Unknown column 'cid' in 'where clause' - Invalid query: delete from apconfig where cid = '7'
+ERROR - 2017-09-05 15:06:16 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 15:06:22 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a, apconfig ac where a.cid = '6' and ac.apid= a.apid' at line 1 - Invalid query: delete from ap a, apconfig ac where a.cid = '6' and ac.apid= a.apid
+ERROR - 2017-09-05 15:07:11 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 15:07:15 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 15:07:51 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a, apconfig ac where a.cid = '8' and ac.apid= a.apid' at line 1 - Invalid query: delete from ap a, apconfig ac where a.cid = '8' and ac.apid= a.apid
+ERROR - 2017-09-05 15:07:54 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 15:07:56 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a, apconfig ac where a.cid = '8' and ac.apid= a.apid' at line 1 - Invalid query: delete from ap a, apconfig ac where a.cid = '8' and ac.apid= a.apid
+ERROR - 2017-09-05 15:22:42 --> Query error: Unknown column 'u.udi' in 'where clause' - Invalid query: delete ul, u from usedlog ul, user u where u.cid = '8' and u.udi = ul.uid
+ERROR - 2017-09-05 15:22:46 --> Query error: Unknown column 'u.udi' in 'where clause' - Invalid query: delete ul, u from usedlog ul, user u where u.cid = '8' and u.udi = ul.uid
+ERROR - 2017-09-05 17:02:11 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:02:13 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:02:15 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:02:19 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:02:21 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:02:24 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:02:28 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:09:58 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:12:27 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:12:35 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? or cpun like ? order by createtime limit ?,?' at line 1 - Invalid query: select * from cooperater where nickname like ? or cpun like ? order by createtime limit ?,?
+ERROR - 2017-09-05 17:12:41 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:12:44 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? or cpun like ? order by createtime limit ?,?' at line 1 - Invalid query: select * from cooperater where nickname like ? or cpun like ? order by createtime limit ?,?
+ERROR - 2017-09-05 17:13:58 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:16:16 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:16:42 --> 404 Page Not Found: Res/js
+ERROR - 2017-09-05 17:23:29 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? or c.cpun like ? order by c.createtime limit ?,?' at line 1 - Invalid query: select c.*, (select count(a.apid) from ap a where a.cid = c.cid) count from cooperater c where c.nickname like ? or c.cpun like ? order by c.createtime limit ?,?
+ERROR - 2017-09-05 17:35:42 --> Severity: Notice --> Undefined index: aname /Code/php/workspace/woms-portal/app/models/admin/Corpmanage.php 178
+ERROR - 2017-09-05 17:35:47 --> Severity: Notice --> Undefined index: aname /Code/php/workspace/woms-portal/app/models/admin/Corpmanage.php 178
+ERROR - 2017-09-05 17:55:29 --> 404 Page Not Found: cooperater/Corp/addsysnotice
+ERROR - 2017-09-05 17:56:00 --> Severity: Notice --> Undefined variable: notice /Code/php/workspace/woms-portal/gui/adc/sysnotice_add.php 48
+ERROR - 2017-09-05 17:56:00 --> Severity: Warning --> Invalid argument supplied for foreach() /Code/php/workspace/woms-portal/gui/adc/sysnotice_add.php 48

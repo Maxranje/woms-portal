@@ -47,7 +47,7 @@ class Auth extends CI_Model {
 			$ap = $res->row_array();
 
 			# connect bas device
-			$socket = $this->socket->createsocket("udp://{$ap['wlanip']}:2000");
+			$socket = $this->socket->createsocket("udp://{$ap['wanip']}:2000");
 			$this->packet->init(0x02, $ap['modal'], $ap['key'], $tokeninfo['ip']);
 			
 			#看看有没有用

@@ -51,13 +51,13 @@ html, body,section{ height: 100%; width: 100%; }
 	<section>
 		<?php
 		if($tmp['type'] != '3'){
-			$tp = empty($tmp['phone_bgpic']) ? "top.jpg" : $tmp['phone_bgpic'];
+			$tp = empty($tmp['pc_bgpic']) ? "pcbg.jpg" : $tmp['pc_bgpic'];
 			echo '<div style="height:100%;" >';
 			echo '<img src="/res/images/template/'.$tp.'" style="height: 100%; width: 100%;">';
 			echo '<div>';
 		}else{
-			$tp = json_decode($tmp['phone_bgpic'], true);
-			$tp[0] = empty($tp[0]) ? "top.jpg" : $tp[0];
+			$tp = json_decode($tmp['pc_bgpic'], true);
+			$tp[0] = empty($tp[0]) ? "pcbg.jpg" : $tp[0];
 			echo '<div class="js-silder"><div class="silder-scroll"><div class="silder-main">';
 			foreach ($tp as $row) {
 				if(!empty($row)){
@@ -87,7 +87,9 @@ html, body,section{ height: 100%; width: 100%; }
 					<input type="password" class="form-control b-success input-sm" name="authpass" placeholder="密码">
 					<input type="hidden"  name="acctype" value="userlogin">
 				</div>
-				<button class="btn btn-success btn-block m-t-md m-b-md btn-sm">登录验证</button>
+				<div class="input-group block">
+					<button class="btn btn-success btn-block m-t-md m-b-md btn-sm">登录验证</button>
+				</div>
 				<?php
 				} else if($authtype == "authphone"){
 				?>
@@ -108,7 +110,9 @@ html, body,section{ height: 100%; width: 100%; }
 				} else {
 				?>
 				<input type="hidden"  name="acctype" value="login">
-				<button class="btn btn-success btn-block m-t-md m-b-md btn-sm" type="submit">登录上网</button>
+				<div class="input-group block"> 
+					<button class="btn btn-success btn-block m-t-md m-b-md btn-sm" type="submit" style="z-index: 10000;">登录上网</button>
+				</div>
 				<?php
 				}
 				?>

@@ -29,7 +29,7 @@ include ('top.php');
 				<section class="scrollable wrapper">
 					<?php 
 					if( isset($failed_reson) ) {
-						echo '<p class="padder-v m-l-n m-r-n bg-warning lter text-center"><span class="text-danger font-bold m-t-sm">'.$failed_reson.'</span></p>';
+						echo '<p class="padder-v m-l-n m-r-n m-t-n bg-warning lter text-center"><span class="text-danger font-bold m-t-sm">'.$failed_reson.'</span></p>';
 					} 
 					?>
 					<table  id="table">

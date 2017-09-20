@@ -89,9 +89,10 @@ class Usermanage extends CI_Model {
 				$ap['apname'] = $row['apname'];
 				$ap['uname'] = $row['uname'];
 				$ap['state'] = $row['state'];
-				$ap['type'] = $row['acctype']=='c'?"帐号密码验证":($row['acctype']=='m'?'MAC白名单验证':($row['acctype']=='w'?"微信验证":($row['acctype']=='n'?"一键认证":"手机短信验证")));
-				$ap['protocol'] = $row['protocol'] == 'w' ? 'WIFIDOG' : ($row['protocol'] == 'p' ? 'PORTAL2.0' :'PORTAL2.0 RC' );
-				$ap['hearttime'] = date('Y-m-d H:i:s', $row['hearttime']);
+				$ap['type'] = $row['acctype']=='c'?"帐号认证":($row['acctype']=='m'?'MAC白名单认证':($row['acctype']=='w'?"微信认证":($row['acctype']=='n'?"一键认证":"短信认证")));
+				$ap['starttime'] = date('Y-m-d H:i:s', $row['starttime']);
+				$ap['ip'] = $row['ip'];
+				$ap['mac'] = $row['mac'];
 				$ap['totaltime'] = $this->func->sec2time($row['totaltime']);
 				$ap['tobeoffline'] = $row['tobeoffline'];
 				$this->data['rows'][] = $ap;
@@ -149,17 +150,7 @@ class Usermanage extends CI_Model {
 			}
 			$info = $res->row_array();
 			$this->data['info']['name'] = $info['uname'];
-			$this->data['info']['type'] = $info['acctype']=='c'?"用户名密码登录":($info['acctype']=='m'?'MAC白名单验证登录':($info['acctype']=='w'?"微信验证登录":"手机短信验证登录"));
-			$this->data['info']['starttime'] = date('Y-m-d H:i:s', $info['starttime']);
-			if ($info['state'] == '1') {
-				$this->data['info']['endtime'] = "在线....";
-			}else if($info['endtime'] != 0){
-				$this->data['info']['endtime'] = date('Y-m-d H:i:s', $info['endtime']);
-			}else{
-				$this->data['info']['endtime'] = "";
-			}
-			$this->data['info']['ip'] 		= $info['ip'];
-			$this->data['info']['mac'] 		= $info['mac'];
+			$this->data['info']['type'] = $info['acctype']=='c'?"帐号认证":($info['acctype']=='m'?'MAC白名单认证':($info['acctype']=='w'?"微信认证":($info['acctype']=='n'?"一键认证":"短信认证")));
 			$this->data['info']['allup'] 	= $this->func->easybyte ($info['allbyte_up']);
 			$this->data['info']['alldown'] 	=  $this->func->easybyte ($info['allbyte_down']);
 			$this->data['info']['userup']   =  $this->func->easybyte ($info['usedbyte_down']);

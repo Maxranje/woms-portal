@@ -1,0 +1,15 @@
+ERROR - 2017-09-12 09:08:27 --> 404 Page Not Found: Res/images
+ERROR - 2017-09-12 09:08:37 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-09-12 09:16:59 --> Severity: Notice --> Undefined index: cid /Code/php/workspace/woms-portal/app/libraries/Func.php 244
+ERROR - 2017-09-12 09:16:59 --> failed -- LDAP服务尚未配置, 请联系管理员
+ERROR - 2017-09-12 09:17:37 --> failed -- 用户名密码不正确
+ERROR - 2017-09-12 09:17:41 --> failed -- 用户名密码不正确
+ERROR - 2017-09-12 09:18:21 --> Severity: Notice --> Undefined offset: 1 /Code/php/workspace/woms-portal/app/libraries/Func.php 267
+ERROR - 2017-09-12 09:18:21 --> failed -- 用户名密码不正确
+ERROR - 2017-09-12 09:19:39 --> Severity: Notice --> Undefined offset: 1 /Code/php/workspace/woms-portal/app/libraries/Func.php 267
+ERROR - 2017-09-12 09:19:39 --> failed -- 用户名密码不正确
+ERROR - 2017-09-12 09:20:04 --> 404 Page Not Found: c/Api/wifidog
+ERROR - 2017-09-12 09:22:07 --> failed -- 用户名密码不正确
+ERROR - 2017-09-12 09:23:15 --> failed -- 用户名密码不正确 {md5}2WQXPcRNqD7q+jrrvumhoA==
+ERROR - 2017-09-12 09:34:41 --> failed -- 用户名密码不正确 {md5}2WQXPcRNqD7q+jrrvumhoA==
+ERROR - 2017-09-12 09:36:36 --> success -- success
