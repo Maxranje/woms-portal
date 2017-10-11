@@ -51,7 +51,7 @@ include ('top.php');
 						</div>						
 						<div class="form-group col-sm-2">
 							<select name="" class="form-control input-sm usertype">
-								<option class="text-muted" value="all">用户类型</option>
+								<option class="text-muted" value="all">登录类型</option>
 								<option value="n">一键认证</option>
 								<option value="c">帐号认证</option>
 								<option value="w">微信认证</option>

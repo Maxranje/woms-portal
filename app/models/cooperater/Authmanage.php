@@ -222,11 +222,11 @@ class Authmanage extends CI_Model {
 			$ldapport = $this->input->post('ldapport');
 			$ldapusername = $this->input->post('ldapusername');
 			$ldapuserpass = $this->input->post('ldapuserpass');
-			$ldapfilter = $this->input->post('ldapfilter');
-			$ldapattr = $this->input->post('ldapattr');
+			$ldapattr1 = $this->input->post('ldapattr1');
+			$ldapattr2 = $this->input->post('ldapattr2');
 			$ldapdn = $this->input->post('ldapdn');
 
-			if(!$ldaphost || !$ldapport || !$ldapusername || !$ldapuserpass || !$ldapdn ||!$ldapattr || !$ldapfilter){
+			if(!$ldaphost || !$ldapport || !$ldapusername || !$ldapuserpass || !$ldapdn ||!$ldapattr1 || !$ldapattr2){
 				throw new Exception("请求失败, ldap服务器配置参数没有配全, 请检查");
 			}
 
@@ -235,13 +235,13 @@ class Authmanage extends CI_Model {
 			$res = $this->db->query('select lid from ldap where cid = ?', array($_SESSION['cid']));
 
 			if ($res->num_rows() == 0){
-				$query = "insert into ldap (ldaphost,ldapport, ldapusername, ldapuserpass, dn, filter, attr, cid) value (?,?, ?,?,?,?,?,?)";
+				$query = "insert into ldap (ldaphost,ldapport, ldapusername, ldapuserpass, dn, attr1, attr2, cid) value (?,?, ?,?,?,?,?,?)";
 			}else{
 				$result = $res->row_array();
-				$query = "update ldap set ldaphost=?,ldapport=?, ldapusername=?, ldapuserpass=?, dn=?, filter=?, attr=? where cid =?";
+				$query = "update ldap set ldaphost=?,ldapport=?, ldapusername=?, ldapuserpass=?, dn=?, attr1=?, attr2=? where cid =?";
 			}
 
-			$tt = $this->db->query($query, array($ldaphost,$ldapport, $ldapusername,$ldapuserpass,$ldapdn, $ldapfilter, $ldapattr, $_SESSION['cid']));
+			$tt = $this->db->query($query, array($ldaphost,$ldapport, $ldapusername,$ldapuserpass,$ldapdn, $ldapattr1, $ldapattr2, $_SESSION['cid']));
 			if(!$tt) {   
 				throw new Exception ("配置LDAP服务器参数失败， 更新数据失败");
 			}

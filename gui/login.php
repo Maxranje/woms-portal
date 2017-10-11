@@ -56,20 +56,20 @@ var Ie = window.navigator.userAgent.indexOf('MSIE');
 if(Chrome != -1){
     var v = window.navigator.userAgent.split('Chrome/');
     if(parseFloat(v[1].substring(0,3)) < 49){
-        alert("浏览器版本不足以展示平台内容, 请升级到最新浏览器版本");
+        alert("浏览器版本过低，为了避免使用上的困扰，请升级该到最新版本");
     }
 }
 
 if(Firefox != -1){
     var v = window.navigator.userAgent.split('Firefox/');
     if(parseFloat(v[1].substring(0,3)) < 54){
-        alert("浏览器版本不足以展示平台内容, 请升级到最新浏览器版本");
+        alert("浏览器版本过低，为了避免使用上的困扰，请升级该到最新版本");
     }
 }
 if(Ie != -1){
     var v = window.navigator.userAgent.split('MSIE');
     if(parseFloat(v[1].substring(0,2)) < 11){
-        alert("浏览器版本不足以展示平台内容, 且不建议也不推荐使用IE浏览器");
+        alert("浏览器版本过低，为了避免使用上的困扰，系统推荐使用Chrome, Firefox, IE11+, 或者浏览器切换到极速模式");
     }
 }
 </script>

@@ -85,7 +85,7 @@ function createTable (){
 	});
 	$('.datagrid-pager.pagination').pagination({
 		displayMsg:'数据从 {from} 到 {to}, 共 {total} 条数据'
-	})	
+	});
 }
 function showTipMessageDialog(msg, state, title="提示信息", uri=""){
 	if(state == "success"){

@@ -157,10 +157,10 @@ class Apmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if(!$sc) {
-				$sql = "select a.*, ac.* ,(select count(u.apid) from user u where u.apid = a.apid and u.state = '1'and valid='1') olcount, (select count(u.apid) from user u where u.apid = a.apid) allcount from ap a, apconfig ac where cid = ? and a.apid = ac.apid order by a.createtime desc limit ?, ?";
+				$sql = "select a.*, ac.* ,(select count(u.uid) from user u where u.apid = a.apid and u.state = '1'and u.valid='1') olcount, (select count(u.apid) from user u where u.apid = a.apid) allcount from ap a, apconfig ac where cid = ? and a.apid = ac.apid order by a.createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], $page, $rows));
 			} else {
-				$sql = "select a.*, ac.* ,(select count(u.apid) from user u where u.apid = a.apid and u.state = '1' and valid='1') olcount,(select count(u.apid) from user u where u.apid = a.apid) allcount from ap a, apconfig ac where cid = ? and a.apid = ac.apid and a.apname like ? order by a.createtime desc limit ?, ?";				
+				$sql = "select a.*, ac.* ,(select count(u.uid) from user u where u.apid = a.apid and u.state = '1' and u.valid='1') olcount,(select count(u.apid) from user u where u.apid = a.apid) allcount from ap a, apconfig ac where cid = ? and a.apid = ac.apid and a.apname like ? order by a.createtime desc limit ?, ?";				
 				$res = $this->db->query($sql , array($_SESSION['cid'], '%'.$sc.'%', $page, $rows));				
 			}
 			$result = $res->result_array();

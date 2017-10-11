@@ -38,7 +38,7 @@ include ('top.php');
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><a class="text-danger m-r-sm">*</a>LDAP服务器密码</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control" data-parsley-required="true" placeholder="" name="ldapuserpass" value="<?=$asc['ldapuserpass']?>">
+									<input type="password" class="form-control" data-parsley-required="true" placeholder="" name="ldapuserpass" value="<?=$asc['ldapuserpass']?>">
 								</div>
 							</div>	
 							<div class="line line-dashed line-lg pull-in"></div>							
@@ -50,18 +50,18 @@ include ('top.php');
 							</div>						
 							<div class="line line-dashed line-lg pull-in"></div>							
 							<div class="form-group">
-								<label class="col-sm-2 control-label"><a class="text-danger m-r-sm">*</a>获取名标识</label>
+								<label class="col-sm-2 control-label"><a class="text-danger m-r-sm">*</a>用户属性名</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control" data-parsley-required="true" placeholder="用户属性标识， 如有多个请以逗号分割" name="ldapattr" value="<?=$asc['attr']?>" >
+									<input type="text" class="form-control" data-parsley-required="true" placeholder="用户属性名， 如有多个请以逗号分割" name="ldapattr1" value="<?=$asc['attr1']?>" >
 								</div>
 							</div>								
 							<div class="line line-dashed line-lg pull-in"></div>							
 							<div class="form-group">
-								<label class="col-sm-2 control-label"><a class="text-danger m-r-sm">*</a>通用名标识</label>
+								<label class="col-sm-2 control-label"><a class="text-danger m-r-sm">*</a>用户属性名</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control" data-parsley-required="true" placeholder="过滤检索对象" name="ldapfilter" value="<?=$asc['filter']?>">
+									<input type="text" class="form-control" data-parsley-required="true" placeholder="用户属性名， 如有多个请以逗号分割" name="ldapattr2" value="<?=$asc['attr2']?>" >
 								</div>
-							</div>						
+							</div>							
 						</form>
 					</div>
 				</section>

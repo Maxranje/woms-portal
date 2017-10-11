@@ -272,27 +272,31 @@ class Func {
 				throw new Exception ('链接ldap服务器失败');
 			}
 			ldap_set_option($connect, LDAP_OPT_PROTOCOL_VERSION, 3);
-			$state = ldap_bind($connect, $ldap['ldapusername'], $ldap['ldapuserpass']);
-			if(!$state){
-				throw new Exception("ldap绑定服务器失败");
-			}
-			$attr = explode(",", $ldap['attr']);
-			if(!is_array($attr)){
-				$attr = array('userPassword');
-			}
-			$result = ldap_search($connect, $ldap['dn'], $ldap['filter']."=".$username, $attr);
-			$entry = ldap_get_entries($connect, $result);
-			if(!$entry || $entry['count'] == 0){
-				throw new Exception("用户名密码不正确");
-			}
-			// test
-			$password = "{md5}".base64_encode(md5($password, 16));
-			if(isset($entry[0][strtolower($attr[0])])){
-				if($entry[0][strtolower($attr[0])][0] != $password){
-					throw new Exception("用户名密码不正确");
-				}
+			$u = $username;
+			$username .= "@corp.homelink.com.cn";
+			$state = ldap_bind($connect, $username, $password);	
+			if($state){
+				return array("success", "success");
 			}else{
-				throw new Exception("用户名密码不正确");
+				ldap_bind($connect, $ldap['ldapusername'], $ldap['ldapuserpass']);
+				$result = ldap_search($connect, "OU=链家网,DC=corp,DC=homelink,DC=com,DC=cn", $ldap['attr2'].'='.$u , array($ldap['attr1']));
+				$entry = ldap_get_entries($connect, $result);
+				if($entry['count'] == 0){
+					$result = ldap_search($connect, 'ou=北京链家,DC=corp,DC=homelink,DC=com,DC=cn', $ldap['attr2'].'='.$u , array($ldap['attr1']));
+					$entry = ldap_get_entries($connect, $result);
+					if($entry['count'] == 0){
+						throw new Exception("用户名密码不正确");
+					}
+				}
+				$uname = strtolower($ldap['attr1']);
+				$uname = $entry[0][$uname][0];
+				$uname = $uname."@corp.homelink.com.cn";
+				$bind = ldap_bind($connect, $uname, $p);
+				if($bind){
+					return array("success", "success");
+				}else{
+					throw new Exception("用户名密码不正确");
+				}			
 			}
 		}catch (Exception $ec){
 			if(isset($connect)){

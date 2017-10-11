@@ -5,8 +5,8 @@ class Splash_mo extends CI_Model {
 	public function __construct(){
 		parent::__construct();
 		$this->load->database();
-		$this->load->library('func');
-		$this->data = array('state'=>'success', 'reson'=>'Mission Complete', 'tmp'=>'');
+		$this->load->library('Func');
+		$this->data = array('state'=>'success', 'reson'=>'', 'tmp'=>'');
 	}
 
 	public function index (){
@@ -121,6 +121,9 @@ class Splash_mo extends CI_Model {
 			}
 
 			if($authcode && $authtype == 'w'){
+				if(!$ap['wxloginable']){
+					throw new Exception("微信认证功能未开启, 无法使用微信进行认证");
+				}			
 				$sql = "select t.*, wf.* from wxtoken t, wxfuns wf where t.cid = ? and t.type=? and t.token =? and t.openid = wf.openid";
 				$res = $this->db->query ($sql, array($_SESSION['cid'], $authtype, $authcode));
 				if(!$res || $res->num_rows() == 0){
@@ -137,8 +140,13 @@ class Splash_mo extends CI_Model {
 				
 				$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'w',0, $wx['openid'],'',time(), $clientip, $clientmac, $wanip);
 				$token = $this->func->addtoken ($uid, $ap['apid'], 'w', $clientip, $clientmac);	
+
+				$_SESSION['loginable'] = 'login';
+				$_SESSION['wxlogin'] = '1';				
 				$optr = $this->func->getOptr($wx['openid'], "wx");
-				$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$wx['openid']."&upass=wx";				redirect($redirtoken, 'auto', 302);
+				$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$wx['openid']."&upass=wx";			
+				redirect($redirtoken, 'auto', 302);
+
 			}
 
 			
@@ -164,15 +172,6 @@ class Splash_mo extends CI_Model {
 				$this->data['authtype'] = 'authuser';
 			} else if($ap['authtype'] == '2') {
 				$this->data['authtype'] = 'authphone';
-			}
-
-			// no auth with ad
-			if ($ap['authtype'] == 3){
-				$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'n',0, 'auth_systemuser', 'auth_systempass',time(), $clientip, $clientmac, wanip);
-				$token = $this->func->addtoken ($uid, $ap['apid'], 'n', $clientip, $clientmac);	
-				$optr = $this->func->getOptr('auth_systemuser', "auth_systempass");
-				$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=auth_systemuser&upass=auth_systempass";
-				redirect($redirtoken);				
 			}
 
 			// auth

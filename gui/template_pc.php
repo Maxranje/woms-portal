@@ -5,7 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en" class="app">
 <head>
 <meta charset="utf-8" />
-<meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--ie使用edge渲染模式-->
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
 <meta name="renderer" content="webkit"><!--360渲染模式-->
@@ -42,7 +41,9 @@ html, body,section{ height: 100%; width: 100%; }
 	left: 0px;
 }
 
-.auth1{position: absolute; top: 40%; left:50%; background: hsla(0,0%,100%, 0.5);  transform: translate(-50%, -70%); width: 30%; 
+.auth1{position: absolute; top: 40%; left:50%; background: hsla(0,0%,100%, 0.5);  
+	-webkit-transform:translate(-50%,-60%);
+	transform: translate(-50%, -60%); width: 30%; 
 	overflow: hidden; padding: 30px 35px 35px 35px; border-radius: .4em; box-shadow: 0 0 0 1px hsla(0,0%,100%,.1) inset, 0 .5em 1em rgba(0, 0, 0, 0.6);	}
 .auth1::before { content: '';  position: absolute;  top: 0;  right: 0;  bottom: 0;  left: 0;  filter: blur(40px);  -webkit-filter: blur(40px); margin: -30px; }
 </style>
@@ -51,13 +52,17 @@ html, body,section{ height: 100%; width: 100%; }
 	<section>
 		<?php
 		if($tmp['type'] != '3'){
-			$tp = empty($tmp['pc_bgpic']) ? "pcbg.jpg" : $tmp['pc_bgpic'];
+			$tp = empty($tmp['pc_bgpic']) ? "pcbg.jpeg" : $tmp['pc_bgpic'];
 			echo '<div style="height:100%;" >';
 			echo '<img src="/res/images/template/'.$tp.'" style="height: 100%; width: 100%;">';
 			echo '<div>';
 		}else{
 			$tp = json_decode($tmp['pc_bgpic'], true);
-			$tp[0] = empty($tp[0]) ? "pcbg.jpg" : $tp[0];
+			if(count($tp) == 1 && empty($tp[0])){
+				$tp[0] = "pcbg.jpeg";
+				$tp[1] = "pcbg1.jpg";
+			}
+
 			echo '<div class="js-silder"><div class="silder-scroll"><div class="silder-main">';
 			foreach ($tp as $row) {
 				if(!empty($row)){
@@ -68,12 +73,16 @@ html, body,section{ height: 100%; width: 100%; }
 			}
 			echo '</div></div></div>';
 		}
-		if($tmp['type'] == 2){
-			echo '<div class="tmp-top-model"><span>'.$row['content'].'</span></div>';
-		}
 		?>
 		<div class="auth1">	
 			<p class="text-center text-dark font-bold m-b"><?=$tmp['title']?></p>
+			<?php
+			if($tmp['type'] == 2){
+				echo '<div class="line line-dashed line-lg pull-in"></div>';
+				echo '<div class=""><span>'.$tmp['content'].'</span></div>';
+				echo '<div class="line line-dashed line-lg pull-in"></div>';
+			}
+			?>
 			<form class="form-horizontal" method="post" style="z-index: 10000">
 				<?php
 				if ($authtype == "authuser") {
@@ -172,6 +181,16 @@ $(function (){
     $('.img').css('width', $(window).width());    
 });  
 
+</script>
+
+<script type="text/javascript">
+var Ie = window.navigator.userAgent.indexOf('MSIE');
+if(Ie != -1){
+    var v = window.navigator.userAgent.split('MSIE');
+    if(parseFloat(v[1].substring(1,3)) < 10){
+        alert("浏览器版本过低，为了避免使用上的困扰，系统推荐使用Chrome或Firefox，或者切换浏览器为极速模式");
+    }
+}
 </script>
 </html>
 

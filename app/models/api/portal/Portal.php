@@ -18,14 +18,18 @@ class Portal extends CI_Model {
 			throw new Exception ('认证参数不正确， 取得页面失败');
 		}
 		$ap = $res->row_array();	
-
-		if($ap['showstatuspage'] == 's' && isset($url)) {
-			$this->data['url'] = urldecode($url);
+		if($ap['showstatuspage'] == 's' && isset($_SESSION['url'])) {
+			$this->data['url'] = urldecode($_SESSION['url']);
 		} else{
 			if(strpos($ap['customurl'], "http://") !== false){
 				$ap['customurl'] = 'http://'.$ap['customurl'];
 			}
 			$this->data['url'] = $ap['customurl'];
+		}
+
+		if(isset($_SESSION['wxlogin']) && $_SESSION['wxlogin'] = "1"){
+			redirect($this->data['url']);
+			exit();			
 		}
 
 		if($ap['showad'] == '0'){
