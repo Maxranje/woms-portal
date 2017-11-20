@@ -41,12 +41,17 @@ class Tmpmanage extends CI_Model {
 			$state = $this->input->post('state');
 			$corp = $this->input->post('corp');
 			$array = array();
-
+				
+			$query = "select count(*) total from template t, cooperater c where t.cid = c.cid " ;
 			$sql = "select t.*, c.nickname, c.name_manager, c.phone from template t, cooperater c where t.cid = c.cid " ;
 			if($sc){
 				$sql .=" and t.name like ?";
+				$query .=" and t.name like ?";
 				$array[] = '%'.$sc.'%';
 			}
+			$res = $this->db->query($query,$array);
+			$result = $res->row_array();
+			$this->data['total'] = $result['total'];
 
 			$sql .= " order by t.createtime limit ?,?";
 			$array[] = $page;
@@ -69,7 +74,6 @@ class Tmpmanage extends CI_Model {
 				$array['phone'] = $row['phone'];
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";
@@ -91,11 +95,16 @@ class Tmpmanage extends CI_Model {
 
 			$array = array();
 
+			$query = "select count(*) total from template t, cooperater c where t.cid = c.cid and state = '0'" ;
 			$sql = "select t.*, c.nickname, c.name_manager, c.phone from template t, cooperater c where t.cid = c.cid and state = '0'" ;
 			if($sc){
 				$sql .=" and t.name like ?";
+				$query .=" and t.name like ?";
 				$array[] = '%'.$sc.'%';
 			}
+			$res = $this->db->query($query,$array);
+			$result = $res->row_array();
+			$this->data['total'] = $result['total'];			
 
 			$sql .= " order by t.createtime limit ?,?";
 			$array[] = $page;
@@ -118,7 +127,6 @@ class Tmpmanage extends CI_Model {
 				$array['phone'] = $row['phone'];
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";

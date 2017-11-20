@@ -25,7 +25,7 @@ require('top.php');
 							<section>
 								<div class="form-group">
 									<label class="col-sm-2 control-label"><a class="text-danger m-r-sm">*</a>接入点名称</label>
-									<div class="col-sm-9"><input type="text" class="form-control" data-parsley-required="true" name="apname" data-parsley-length="[4, 12]"></div>
+									<div class="col-sm-9"><input type="text" class="form-control" data-parsley-required="true" name="apname" data-parsley-length="[4, 32]"></div>
 								</div>
 								<div class="line line-dashed line-lg pull-in"></div>
 								<div class="form-group">

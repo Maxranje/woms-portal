@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Portal extends CI_Model {
+class Portals extends CI_Model {
 	
 	public function __construct(){
 		parent::__construct();
@@ -21,12 +21,8 @@ class Portal extends CI_Model {
 		if($ap['showstatuspage'] == 's' && isset($_SESSION['url'])) {
 			$this->data['url'] = urldecode($_SESSION['url']);
 		} else{
-			if(strpos($ap['customurl'], "http://") !== false){
-				$ap['customurl'] = 'http://'.$ap['customurl'];
-			}
 			$this->data['url'] = $ap['customurl'];
 		}
-
 		if(isset($_SESSION['wxlogin']) && $_SESSION['wxlogin'] = "1"){
 			redirect($this->data['url']);
 			exit();			

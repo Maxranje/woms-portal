@@ -59,8 +59,7 @@ include ('top.php');
 				</section>
 			</form>
 			<div class="actions m-t">
-				<a class="btn btn-default btn-sm btn-next m-r" >保存</a>
-				<a class="btn btn-success btn-sm btn-return" href="/corp/aplist">返回列表</a>
+				<a class="btn btn-default btn-sm btn-next m-r" >完成配置</a>
 			</div>
 		</section>
 	</section>
@@ -106,7 +105,7 @@ $(function (){
 		var apid = $('input[name=apid]').val();
 		zy.send_sync_ajax ('/corp/apoptions/assitconfig', {t1:a1,t2:a2,t3:a3,t4:a4, endtime:endtime,apid:apid,openable:openable}, function(data){
 			if(data.state == "success"){
-				window.location.reload(true);
+				showTipMessageDialog (data.reson, data.state, "提示信息", "/corp/aplist");
 			}else{
 				showTipMessageDialog (data.reson, data.state);
 			}

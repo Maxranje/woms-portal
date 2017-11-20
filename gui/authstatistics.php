@@ -134,15 +134,25 @@ function initTables (){
 		{field:'starttime', title:'开始使用时间',width:25, align:'center'},
 		{field:'totaltime', title:'总使用时间', width:20,align:'center'},
 		{field:'more', title:'', width:6,align:'center', formatter:function (value, row, index) {
-			return '<a class="showinfo th-sortable" title="详细信息" onclick="showinfo('+row.id+')"><i class="fa fa-eye text-dark"></i></a>';
+			if(row.ulid){
+				return '<a class="showinfo th-sortable" title="详细信息" onclick="showinfo('+row.id+')"><i class="fa fa-eye text-dark"></i></a>';
+			}else{
+				return '<a class=" th-sortable" title="无信息" )"><i class="fa  fa-eye-slash text-dark"></i></a>';
+			}
+
 		}},
 		{field:'more1', title:'', width:6,align:'center', formatter:function (value, row, index) {
 			var a = "";
-			if(row.tobeoffline == 1){
-				a += '<a class="th-sortable" style="cursor:default" title="强制下线中, 请等待"><i class="fa fa-ban text-danger"></i></a>'
-			} else {
-				a += '<a class="offline th-sortable" title="强制下线" onclick="offlineuser('+row.id+', event)"><i class="fa fa-power-off text-dark"></i></a>'
+			if(row.state == 0){
+				a += '<a class="offline th-sortable" title="用户已下线"><i class="fa fa-minus-circle text-dark"></i></a>'
+			}else{
+				if(row.tobeoffline == 1){
+					a += '<a class="th-sortable" style="cursor:default" title="强制下线中, 请等待"><i class="fa fa-ban text-danger"></i></a>'
+				} else {
+					a += '<a class="offline th-sortable" title="强制下线" onclick="offlineuser('+row.id+', event)"><i class="fa fa-power-off text-dark"></i></a>'
+				}
 			}
+
 			return a;
 		}}		
 	];

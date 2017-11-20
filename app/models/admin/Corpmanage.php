@@ -56,9 +56,18 @@ class Corpmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if($sc) {
+				$query = "select count(*) as total from cooperater where nickname like ? or cpun like ?";
+				$res = $this->db->query($query , array('%'.$sc.'%','%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select * from cooperater where nickname like ? or cpun like ? order by createtime limit ?,?";
 				$res = $this->db->query($sql , array('%'.$sc.'%','%'.$sc.'%', $page, $rows));
 			} else {
+				$res = $this->db->query("select count(*) as total from cooperater ");
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql ="select * from cooperater order by createtime limit ?,?";				
 				$res = $this->db->query($sql , array($page, $rows));				
 			}
@@ -74,7 +83,6 @@ class Corpmanage extends CI_Model {
 				$array['phone'] = $row['phone'];
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";
@@ -93,9 +101,18 @@ class Corpmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if($sc) {
+				$query = "select count(*) as total from cooperater c where c.nickname like ? or c.cpun like ?";
+				$res = $this->db->query($query , array('%'.$sc.'%','%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select c.*, (select count(a.apid) from ap a where a.cid = c.cid) count from cooperater c where c.nickname like ? or c.cpun like ? order by c.createtime limit ?,?";
 				$res = $this->db->query($sql , array('%'.$sc.'%', '%'.$sc.'%', $page, $rows));
 			} else {
+				$res = $this->db->query("select count(*) total from cooperater c");
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql ="select c.*, (select count(a.apid) from ap a where a.cid = c.cid) count from cooperater c order by c.createtime limit ?,?";				
 				$res = $this->db->query($sql , array($page, $rows));				
 			}
@@ -113,7 +130,6 @@ class Corpmanage extends CI_Model {
 				$array['apcountgrant']	= $row['apcountgrant'];
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";
@@ -198,7 +214,7 @@ class Corpmanage extends CI_Model {
 			if($res->num_rows == 0){
 				throw new Exception("该商户不存在， 无法修改密码");
 			}	
-
+			$password = substr(md5($password), 0 ,16);
 			$query = "update cooperater set cppw = ? where cid = ?";
 			$res = $this->db->query($query , array($password, $cid));
 			$this->data['reson'] = "修改密码成功";
@@ -327,7 +343,7 @@ class Corpmanage extends CI_Model {
 			if(!$res || $res->num_rows() == 0){
 				throw new Exception ('请求失败, 错误码：2717');
 			}
-
+			$cppw = substr(md5($cppw), 0, 16);
 			$this->db->trans_start();
 			$sql = "update cooperater set nickname=?, cpun=?, cppw=?, industry=?,name_manager=?, phone=?,email=?,qq=? where cid = ?";
 			$res = $this->db->query ($sql, array($nickname,$cpun,$cppw,$industry,$manage,$phone,$email, $qq, $cid));
@@ -355,9 +371,19 @@ class Corpmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if($sc) {
+				$query = "select count(*) total from (ap a, apconfig ac) left join cooperater c on a.cid = c.cid where a.apid = ac.apid and a.apname like ? ";
+				$res = $this->db->query($query , array('%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select c.cpun, c.nickname, a.apid, a.apname, a.devtype, ac.usecountgrant from (ap a, apconfig ac) left join cooperater c on a.cid = c.cid where a.apid = ac.apid and a.apname like ? order by c.createtime limit ?,?";
 				$res = $this->db->query($sql , array('%'.$sc.'%', $page, $rows));
 			} else {
+				$query = "select count(*) total from (ap a, apconfig ac) left join cooperater c on a.cid = c.cid where a.apid = ac.apid ";
+				$res = $this->db->query($query);
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql ="select c.cpun, c.nickname, a.apid, a.apname, a.devtype, ac.usecountgrant from (ap a, apconfig ac) left join cooperater c on a.cid = c.cid where a.apid = ac.apid order by c.createtime limit ?,?";				
 				$res = $this->db->query($sql , array($page, $rows));				
 			}
@@ -373,7 +399,6 @@ class Corpmanage extends CI_Model {
 				$array['usecountgrant']	= $row['usecountgrant'];
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";
@@ -381,6 +406,29 @@ class Corpmanage extends CI_Model {
 		}
 		echo json_encode($this->data);
 		exit();
+	}
+
+	public function checklicence (){
+		try{
+			$licence = $this->input->post('licence');
+			$secret = $this->input->post('secret');
+			if(!$licence || !$secret){
+				throw new Exception("输入Licence为空");
+			}
+			if(!isset($_SESSION['secret']) || $_SESSION['secret'] != $secret){
+				throw new Exception("请求非法");
+			}
+			list($state, $reson) = $this->func->checklicence2($licence);
+            if($state == "failed"){
+            	throw new Exception($reson);
+            }
+            redirect ("/adc/login");
+		}catch (Exception $ec) {
+            $data['reson'] = $ec->getMessage();
+            $data['access'] = "adc";
+            $data['secret'] = $_SESSION['secret'];
+            $this->load_view("errors/licence", $data);
+		}
 	}
 
 }

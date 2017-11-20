@@ -16,7 +16,7 @@ include ("top.php");
 						</div>
 						<div class="col-sm-4 m-b-xs">
 							<div class="input-group">
-								<input type="text" class="input-sm form-control searchbox" placeholder="Search">		
+								<input type="text" class="input-sm form-control searchbox" placeholder="商家昵称 / 登录名称">		
 								<span class="input-group-btn"><button class="btn btn-sm btn-default btn-search" type="button"><i class="fa fa-search"></i></button></span> 	
 							</div>
 						</div>

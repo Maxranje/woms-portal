@@ -12,7 +12,7 @@ include ('top.php');
 					<section class="panel panel-default">
 						<div class="panel-body">
 							<span class="fa-stack fa-2x pull-left m-r-sm"> <i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-male fa-stack-1x text-white"></i> </span> 
-							<a class="clear"> <span class="h3 block m-t-xs"><strong><?=$oluser?></strong></span> <small class="text-muted text-sm">当前在线用户数</small> </a> 
+							<a class="clear"> <span class="h3 block m-t-xs"><strong><?=$oluser?></strong></span> <small class="text-muted text-sm">当前有效在线用户数</small> </a> 
 						</div>
 					</section>
 				</div>

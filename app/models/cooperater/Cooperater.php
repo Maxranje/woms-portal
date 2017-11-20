@@ -7,6 +7,7 @@ class Cooperater extends CI_Model {
         parent::__construct();
         $this->load->database();
         $this->load->helper('url');
+        $this->load->library('func');
         $this->data = array('state'=>'success', 'reson'=>'Mission Complete');
     }
 
@@ -15,10 +16,16 @@ class Cooperater extends CI_Model {
         *          show info page                 *
         *******************************************
     ***/
-    public function login() {   
+    public function login() {
         try {
-            $username = $this->input->post('username');
-            $password = $this->input->post('password');
+            // list($state, $reson)  = $this->func->checklicense();
+            // if($state == "failed"){
+            //     $data["reson"] = $reson;
+            //     $data["access"] = "cooperater";
+            //     $this->load_view("errors/licence", $data);
+            // }
+            $username = $this->input->post('uname');
+            $password = $this->input->post('upass');
             $secret = $this->input->post('secret');
             if(!$username || !$password || !$secret){
                 $data['secret'] = $this->getSecretCode ();
@@ -29,6 +36,8 @@ class Cooperater extends CI_Model {
             if ($secret != $_SESSION['secret']){
                 throw new Exception ("校验参数不正确");
             }
+
+            $password = base64_decode($password);
 
             $password = substr(md5($password), 0, 16);
             $sql = "select cid, logo from cooperater where binary cpun = ? and cppw = ?";

@@ -1,8 +1,0 @@
-ERROR - 2017-08-29 09:46:54 --> 404 Page Not Found: /index
-ERROR - 2017-08-29 09:46:57 --> 404 Page Not Found: /index
-ERROR - 2017-08-29 10:19:44 --> 404 Page Not Found: Res/images
-ERROR - 2017-08-29 10:19:48 --> 404 Page Not Found: Faviconico/index
-ERROR - 2017-08-29 10:56:13 --> 404 Page Not Found: /index
-ERROR - 2017-08-29 11:06:03 --> 404 Page Not Found: /index
-ERROR - 2017-08-29 11:06:03 --> 404 Page Not Found: Faviconico/index
-ERROR - 2017-08-29 17:36:02 --> Severity: Notice --> Undefined index: ldapdn /Code/php/workspace/woms-portal/gui/authserverconf.php 48

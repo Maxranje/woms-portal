@@ -162,7 +162,7 @@ $(function (){
 			return false;
 		}
 		zy.send_sync_ajax ('/corp/apoptions/apedit', $('form').serialize(), function (data){
-			showTipMessageDialog(data.reson, data.state, "Message", "/corp/aplist");
+			showTipMessageDialog(data.reson, data.state, "提示信息", "/corp/aplist");
 		});
 	});
 

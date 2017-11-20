@@ -278,25 +278,27 @@ class Func {
 			if($state){
 				return array("success", "success");
 			}else{
-				ldap_bind($connect, $ldap['ldapusername'], $ldap['ldapuserpass']);
-				$result = ldap_search($connect, "OU=链家网,DC=corp,DC=homelink,DC=com,DC=cn", $ldap['attr2'].'='.$u , array($ldap['attr1']));
-				$entry = ldap_get_entries($connect, $result);
-				if($entry['count'] == 0){
-					$result = ldap_search($connect, 'ou=北京链家,DC=corp,DC=homelink,DC=com,DC=cn', $ldap['attr2'].'='.$u , array($ldap['attr1']));
-					$entry = ldap_get_entries($connect, $result);
-					if($entry['count'] == 0){
-						throw new Exception("用户名密码不正确");
-					}
-				}
-				$uname = strtolower($ldap['attr1']);
-				$uname = $entry[0][$uname][0];
-				$uname = $uname."@corp.homelink.com.cn";
-				$bind = ldap_bind($connect, $uname, $p);
-				if($bind){
-					return array("success", "success");
-				}else{
-					throw new Exception("用户名密码不正确");
-				}			
+				throw new Exception("用户名密码不正确");
+				// ldap_bind($connect, $ldap['ldapusername'], $ldap['ldapuserpass']);
+				// $result = ldap_search($connect, "OU=链家网,DC=corp,DC=homelink,DC=com,DC=cn", $ldap['attr2'].'='.$u , array($ldap['attr1']));
+				// $entry = ldap_get_entries($connect, $result);
+				// if($entry['count'] == 0){
+				// 	throw new Exception("用户名密码不正确");
+				// 	// $result = ldap_search($connect, 'ou=北京链家,DC=corp,DC=homelink,DC=com,DC=cn', $ldap['attr2'].'='.$u , array($ldap['attr1']));
+				// 	// $entry = ldap_get_entries($connect, $result);
+				// 	// if($entry['count'] == 0){
+				// 	// 	throw new Exception("用户名密码不正确");
+				// 	// }
+				// }
+				// $uname = strtolower($ldap['attr1']);
+				// $uname = $entry[0][$uname][0];
+				// $uname = $uname."@corp.homelink.com.cn";
+				// $bind = ldap_bind($connect, $uname, $p);
+				// if($bind){
+				// 	return array("success", "success");
+				// }else{
+				// 	throw new Exception("用户名密码不正确");
+				// }			
 			}
 		}catch (Exception $ec){
 			if(isset($connect)){
@@ -307,5 +309,69 @@ class Func {
 		return array("success", "success");
 	}
 
+	public function checklicense (){
+		try{
+			if(!file_exists("/var/run/woms-license.m")){
+				throw new Exception();
+			}
+			$str = file_get_contents("/var/run/woms-license.m");
+			if(!$str || strlen($str)){
+				throw new Exception();
+			}
+			$array = array();
+			$cmp = exec("ifconfig -a | grep HWaddr");
+			$msg = "";
+			foreach ($cmp as $row) {
+				$msg .= substr($row, -17); 
+			}
+			$info = json_decode(authcode ($str, "DECODE", $cmp) , true);
+			if (!$info || empty($info)){
+				throw new Exception();
+			}
+			if (!isset($info['validatetime']) || !isset($info['uc']) || !isset($info['ac'])){
+				throw new Exception();
+			}
+			if ($info['validatetime'] <= time()){
+				throw new Exception("Licence 已过有效期");
+			}
+			if(intval($info['uc']) == 0 || intval($info['ac']) == 0 ){
+				throw new Exception();
+			}
+			return array('success', "");
+		}catch (Exception $ec){
+			$msg = empty($ec->getMessage()) ? "无效Licence, 请联系管理员获取最新Licence" : $ec->getMessage();
+			return array('failed', $msg);
+		}
+	}
+	public function checklicence2 ($licence){
+		try{
+			$array = array();
+			$cmp = @exec("ifconfig -a | grep HWaddr", $array);
+			$msg = "";
+			foreach ($cmp as $row) {
+				$msg .= substr($row, -17); 
+			}			
+			$info = json_decode(authcode ($licence, "DECODE", $msg) , true);
+			if (!$info || empty($info)){
+				throw new Exception();
+			}
+			if (!isset($info['validatetime']) || !isset($info['uc']) || !isset($info['ac'])){
+				throw new Exception();
+			}
+			if ($info['validatetime'] <= time()){
+				throw new Exception("Licence 已过有效期, 请联系平台获取最新 Licence");
+			}
+			if(intval($info['uc']) == 0 || intval($info['ac']) == 0 ){
+				throw new Exception();
+			}
+			
+			$this->db->query("update adc set usecountgrant = ?, apcountgrant=? where adcid=1", array(intcal($info['uc']), intval($info['ac'])));
+			file_put_contents("/var/run/woms-license.m", $licence);
+
+		}catch (Exception $ec){
+			$msg = empty($ec->getMessage()) ? "Licence 无效, 请联系平台获取最新Licence" : $ec->getMessage();
+			return array('failed', $msg);
+		}
+	}
 
 }

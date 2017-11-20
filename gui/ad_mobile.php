@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="app">
@@ -46,21 +47,21 @@ body,html{
 </head>
 <body>
     <div class="ad">广告倒计时:<span class="time">20</span>秒</div>
-	<div class="js-silder">
-       <div class="silder-scroll">
+    <div class="js-silder">
+        <div class="silder-scroll">
             <div class="silder-main">
-            	<?php 
-            	foreach ($phonead as $row) {
+            <?php 
+                foreach ($phonead as $row) {
                     if(!empty($row)){
                         echo '<div class="silder-main-img">';
                         echo '<img src="/res/images/template/'.$row.'" alt="" class="img">';
                         echo '</div>';                        
                     }
-            	}
-            	?>
+                }
+            ?>
             </div>
         </div>
-    </div>
+    </div>    
     <p class="uri" style="display: none"><?=$url?></p>
 </body>
 <script type="text/javascript" src="/res/js/jquery/jquery-1.11.2.min.js"></script>

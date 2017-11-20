@@ -64,6 +64,7 @@ function initTables (){
 			return '<a class="grid_item_edit th-sortable" title="编辑"><i class="fa fa-pencil text-dark"></i><i class="fa fa-ban text-danger hidden"></i></a>';
 		}},
 		{field:'more1', title:'', width:10,align:'center', formatter:function (value, row, index) {
+			$('#remove .modal-body p').html("该帐号可能正在使用或准备使用, 是否确定删除 ？");
 			return '<a class="grid_item_remove th-sortable m-l-sm" title="删除"><i class="fa fa-trash text-dark"></i><i class="fa fa-ban text-danger hidden"></i></a>';
 		}}
 	];

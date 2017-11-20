@@ -29,10 +29,10 @@ class Packet{
 			$this->serialno = $this->func->randomSerialno();
 			$username = $this->func->getBytesbyString($username);
 			$password = $this->func->getBytesbyString($password);
-			if($this->challenge){
+			if(isset($this->challenge)){
 				$password = array_merge(array($this->reqid[1]), $password, $this->challenge);
+				$password = $this->func->getBytesbyString(md5($this->func->bytes2str($password),true));
 			}
-			$password = $this->func->getBytesbyString(md5($this->func->bytes2str($password)));
 			$basicarray =  array_merge(array(0x02, 0x03, $this->chaporpap, 0x00), $this->serialno,  $this->reqid, $this->ip, 
 				array(0x00, 0x00), array(0x00, 0x02));
 			$keyarray = $this->func->getBytesbyString($this->key);
@@ -80,9 +80,9 @@ class Packet{
 		}
 		
 		$authpacket = $packet;
-		$responseauth = $this->func->bytes2str(array_splice($authpacket, 16, 16, $this -> authenticator));
-		$authenticator = md5($this->func->bytes2str(array_merge($authpacket, $this->func->getBytesbyString($this -> key))), true);
-		
+		$responseauth = $this->func->bytes2str(array_splice($authpacket, 16, 16, $this->authenticator));
+		$authenticator = md5($this->func->bytes2str(array_merge($authpacket, $this->func->getBytesbyString($this->key))), true);
+
 		if($authenticator != $responseauth){
 			echo "校验字不对  <br>";
 			return false;

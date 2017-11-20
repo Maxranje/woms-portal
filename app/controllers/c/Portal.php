@@ -23,7 +23,7 @@ class Portal extends CI_Controller {
 	}
 
 	public function portal(){
-		$this->load->model ('api/portal/portal', 'model');
+		$this->load->model ('api/portal/portals', 'model');
 		$this->model->index ();
 	}
 }

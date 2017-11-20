@@ -44,7 +44,7 @@ class Wbmanage extends CI_Model {
 	}
 
 	public function get_white_item_page (){
-		$res = $this->db->query ("select apid, apname from ap where cid = ?", array($_SESSION['cid']));
+		$res = $this->db->query ("select apid, apname from ap where cid = ? and protocol = 'w'", array($_SESSION['cid']));
 		$this->data['ap'] = $res->result_array ();		
 		$this->load_view('addwhiteitem', $this->data);
 	}
@@ -59,7 +59,7 @@ class Wbmanage extends CI_Model {
 			throw new Exception("白名单条目不存在");
 		}
 		$this->data['item'] = $res->row_array ();
-		$res = $this->db->query ("select apid, apname from ap where cid = ?", array($_SESSION['cid']));
+		$res = $this->db->query ("select apid, apname from ap where cid = ? and protocol = 'w'", array($_SESSION['cid']));
 		$this->data['ap'] = $res->result_array ();
 		$this->load_view('editwhiteitem', $this->data);				
 	}
@@ -79,14 +79,23 @@ class Wbmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if(!$sc) {
+				$query = "select count(*) as total from blacklist b where b.cid = ?";
+				$res = $this->db->query($query , array($_SESSION['cid']));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select ifnull(a.apname, 'all') as apname, b.* from blacklist b left join ap a on a.apid = b.apid where b.cid = ? order by createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], $page, $rows));
 			} else {
+				$query = "select count(*) as total from blacklist b where b.cid = ? and b.content like ?";
+				$res = $this->db->query($query , array($_SESSION['cid'], '%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select ifnull(a.apname, 'all') as apname, b.* from blacklist b left join ap a on a.apid = b.apid where b.cid = ? and b.content like ? order by createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], '%'.$sc.'%', $page, $rows));				
 			}
 			$result = $res->result_array();
-			$this->data['total'] = $res->num_rows();
 			$this->data['rows'] = array();
 			foreach ($result as $row) {
 				$account = array();
@@ -228,18 +237,27 @@ class Wbmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if(!$sc) {
-				$sql = "select ifnull(a.apname, 'all') as apname, b.* from whitelist b left join ap a on a.apid = b.apid where b.cid = ? order by createtime desc limit ?, ?";
+				$query = "select count(*) from whitelist b left join ap a on a.apid = b.apid and a.protocol='w' where b.cid = ?";
+				$res = $this->db->query($query , array($_SESSION['cid']));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
+				$sql = "select ifnull(a.apname, 'all') as apname, b.* from whitelist b left join ap a on a.apid = b.apid and a.protocol='w' where b.cid = ? order by createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], $page, $rows));
 			} else {
-				$sql = "select ifnull(a.apname, 'all') as apname, b.* from whitelist b left join ap a on a.apid = b.apid where b.cid = ? and b.content like ? order by createtime desc limit ?, ?";
+				$query = "select count(*) as total from whitelist b left join ap a on a.apid = b.apid and a.protocol='w' where b.cid = ? and b.content like ?";
+				$res = $this->db->query($query , array($_SESSION['cid'], '%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
+				$sql = "select ifnull(a.apname, 'all') as apname, b.* from whitelist b left join ap a on a.apid = b.apid and a.protocol='w' where b.cid = ? and b.content like ? order by createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], '%'.$sc.'%', $page, $rows));				
 			}
 			$result = $res->result_array();
-			$this->data['total'] = $res->num_rows();
 			$this->data['rows'] = array();
 			foreach ($result as $row) {
 				$account = array();
-				$account['apname'] = $row['apname'] == "all"?"所有热点":$row['apname'];
+				$account['apname'] = $row['apname'] == "all"?"所有WIFIDOG热点":$row['apname'];
 				$account['time'] = date('Y-m-d', $row['createtime']);
 				$account['wname'] = $row['content'];
 				$account['type'] = $row['type'] == "m" ? "MAC 白名单" : "白名单";

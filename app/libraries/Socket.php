@@ -24,10 +24,10 @@ class Socket{
 	public function interactpacket($requestpacket, $timeout){
 		if($this->socket){
 			fwrite($this->socket, $requestpacket);
+			stream_set_timeout($this->socket,  1);
 			$responsepacket=fread($this->socket, 1024);
-			stream_set_timeout($this->socket,  $timeout);
 			$result  =  stream_get_meta_data ($this->socket);
-			if($result["timed_out"] && empty($responsepacket)){
+			if($result["timed_out"] || empty($responsepacket)){
 				return false;
 			}
 			return $responsepacket;

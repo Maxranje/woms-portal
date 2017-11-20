@@ -48,21 +48,30 @@ class Smsmanage extends CI_Model {
 			$corp = $this->input->post('corp');
 			$array = array();
 
+			$query = "select count(*) total from smstemplate s left join cooperater c on s.cid = c.cid where valid >= 0 ";
+
 			$sql = "select s.*, c.nickname, c.name_manager, c.phone from smstemplate s left join cooperater c on s.cid = c.cid where valid >= 0 " ;
 			if($sc){
+				$query .=" and s.content like ?";
 				$sql .=" and s.content like ?";
 				$array[] = '%'.$sc.'%';
 			}
 
 			if($state && $state != "all"){
+				$query .=" and s.valid= ?";
 				$sql .= " and s.valid = ?";
 				$array[] = intval(($state - 1));
 			}
 
 			if($corp && $corp != "all"){
+				$query .=" and c.cid= ?";
 				$sql .= " and c.cid = ?";
 				$array[] = $corp;
 			}
+			
+			$res = $this->db->query($query);
+			$result = $res->row_array();
+			$this->data['total'] = $result['total'];
 
 			$sql .= " order by s.createtime limit ?,?";
 			$array[] = $page;
@@ -85,7 +94,6 @@ class Smsmanage extends CI_Model {
 				$array['phone'] = $row['phone'];
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";
@@ -105,9 +113,18 @@ class Smsmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if($sc) {
+				$query = "select count(*) total from smstemplate s, cooperater c where s.cid = c.cid and c.nickname like ? and s.valid = '0'";
+				$res = $this->db->query($query , array('%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select s.*, c.nickname from smstemplate s, cooperater c where s.cid = c.cid and c.nickname like ? and s.valid = '0' order by s.createtime limit ?,?";
 				$res = $this->db->query($sql , array('%'.$sc.'%', $page, $rows));
 			} else {
+				$res = $this->db->query("select count(*) total from smstemplate s, cooperater c  where s.cid = c.cid and  s.valid = '0'");
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select s.*, c.nickname from smstemplate s, cooperater c where s.cid = c.cid and s.valid = '0' order by s.createtime limit ?,?";				
 				$res = $this->db->query($sql , array($page, $rows));				
 			}
@@ -124,7 +141,6 @@ class Smsmanage extends CI_Model {
 				$array['nickname'] 		= $row['nickname'];
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";

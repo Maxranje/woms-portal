@@ -47,6 +47,9 @@ include ('top.php');
 								<input type="text" class="form-control m-b d-n" name="customurl" data-trigger="change" data-type="url" placeholder="url" <?php if($ap['showstatuspage']== 'c'){ echo "value='".$ap['customurl']."'";} ?>>
 							</div>
 						</div>
+						<?php 
+						if($ap['protocol']!='p') {
+						?>						
 						<p class="m-t">绑定MAC，二次免认证 </p>
 						<div class="row m-t-n-xs">
 							<div class="col-lg-6">
@@ -60,6 +63,7 @@ include ('top.php');
 								</select>
 							</div>
 						</div>
+						<?php }?>
 						<p class="m-t">浏览广告 </p>
 						<div class="row checkbox m-t-md">
 							<label class="checkbox-custom col-lg-7"><input type="checkbox" name="showad" <?php if($ap['showad']== '1'){ echo "checked='checked'" ;} ?>><i class="fa fa-fw fa-square-o"></i> 
@@ -106,6 +110,9 @@ include ('top.php');
 						</div>
 					</div>    
 				</section>
+				<?php 
+				if($ap['protocol']!='p') {
+				?>
 				<section class="panel panel-default m-t userpanel d-n">
 					<header class="panel-heading">认证服务器</header>
 					<div class="panel-body">
@@ -119,9 +126,10 @@ include ('top.php');
 							</div>
 						</div>  							 					
 					</div>
-				</section>				
+				</section>	
+				<?php } ?>			
 			</form>
-			<button class="btn btn-success btn-sm m-r-sm btn-save">完成</button>
+			<button class="btn btn-success btn-sm m-r-sm btn-save">基础配置完成</button>
 			<a class="btn btn-default btn-sm m-r-sm btn-next" href="/corp/apauthtmp">高级配置</a>
 		</section>
 	</section>
@@ -171,7 +179,7 @@ $(function (){
 	});
 	$('.btn-save').on('click', function (){
 		zy.send_sync_ajax('/corp/apoptions/apconfig', $('form').serialize(), function (data){
-			showTipMessageDialog(data.reson, data.state);
+			showTipMessageDialog(data.reson, data.state, "提示信息", "/corp/aplist");
 		});
 	});
 });

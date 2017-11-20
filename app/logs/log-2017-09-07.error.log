@@ -1,9 +1,0 @@
-ERROR - 2017-09-07 09:24:16 --> Severity: Core Warning --> Cannot load module 'redis' because required module 'igbinary' is not loaded Unknown 0
-ERROR - 2017-09-07 09:24:16 --> 404 Page Not Found: Res/images
-ERROR - 2017-09-07 10:52:51 --> 404 Page Not Found: Faviconico/index
-ERROR - 2017-09-07 11:03:43 --> 404 Page Not Found: /index
-ERROR - 2017-09-07 11:03:43 --> 404 Page Not Found: Faviconico/index
-ERROR - 2017-09-07 11:03:43 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
-ERROR - 2017-09-07 11:03:43 --> 404 Page Not Found: Apple-touch-iconpng/index
-ERROR - 2017-09-07 17:57:02 --> 404 Page Not Found: Res/images
-ERROR - 2017-09-07 17:57:10 --> 404 Page Not Found: Faviconico/index

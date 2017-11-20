@@ -63,6 +63,8 @@ $route['adc/login'] = 'admin/login/index';
 $route['adc/([a-z]+)'] = 'admin/adc/$1';
 $route['adc/([a-z]+)/([a-z]+)'] = 'admin/factory/$1/$2';
 
+# 僵尸用户
+$route['c/api/wifidog/client/index'] = 'c/client/index';
 # wifidog 协议
 $route['c/api/wifidog/([a-z]+)'] = 'c/wifidog/$1';
 

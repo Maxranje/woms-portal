@@ -20,7 +20,7 @@ class Authmanage extends CI_Model {
 	}
 
 	public function get_add_validate_page(){
-		$res = $this->db->query("select apid, apname from ap where cid = ?", array($_SESSION['cid']));
+		$res = $this->db->query("select apid, apname from ap where cid = ? and protocol = 'w'", array($_SESSION['cid']));
 		$this->data['ap']  = $res->result_array();
 		$this->load_view('addvalidate', $this->data);
 	}
@@ -63,14 +63,23 @@ class Authmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if(!$sc) {
+				$query = "select count(*) total from authuser au where au.cid = ?";
+				$res = $this->db->query($query , array($_SESSION['cid']));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select (select count(*) from user u where u.uid = au.id) as usedcount, ifnull(a.apname, 'all') as apname, au.* from authuser au left join ap a on a.apid = au.apid where au.cid = ? order by createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], $page, $rows));
 			} else {
-				$sql = "select (select count(*) from user u where u.uid = au.id) as usedcount, ifnull(a.apname, 'all') as apname, au.* from authuser au left join ap a on a.apid = au.apid where u.cid = ? and au.uname like ? order by createtime desc limit ?, ?";
+				$query = "select count(*) total from authuser au where au.cid = ? and au.uname like ?";
+				$res = $this->db->query($query , array($_SESSION['cid'], '%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
+				$sql = "select (select count(*) from user u where u.uid = au.id) as usedcount, ifnull(a.apname, 'all') as apname, au.* from authuser au left join ap a on a.apid = au.apid where au.cid = ? and au.uname like ? order by createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], '%'.$sc.'%', $page, $rows));				
 			}
 			$result = $res->result_array();
-			$this->data['total'] = $res->num_rows();
 			$this->data['rows'] = array();
 			foreach ($result as $row) {
 				$account = array();

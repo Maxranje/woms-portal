@@ -72,6 +72,8 @@ function initTables (){
 		{field:'state', title:'状态', width:20,align:'center', formatter:function (value, row, index) {
 			if(value == "nomal"){
 				return '<a href="#" title="正常运行"><i class="fa fa-circle text-success"></i></a>';	
+			}else if(row.protocol == 'PORTAL2.0'){
+				return '<a href="#" title="正常运行"><i class="fa fa-circle text-info dker"></i></a>';	
 			}else{
 				return '<a href="#" title="异常状态,'+value+'"><i class="fa fa-circle text-danger"></i></a>';	
 			}

@@ -22,14 +22,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <header class="panel-heading text-center"> <strong class="infomsg">
                 <?php if(isset($reson)) echo '<span class="text-danger">'.$reson.'</span>'; else echo '用户登录'; ?> 
             </strong> </header>
-            <form action="/corp/login" method="post" class="panel-body wrapper-lg m-b-n-lg" data-validate="parsley">
+            <form action="/corp/login" method="post" class="panel-body wrapper-lg m-b-n-lg" data-validate="parsley" onsubmit="return checkinput()">
                 <div class="form-group">
                     <label class="control-label">帐号</label>
-                    <input type="text" class="form-control parsley-validated" data-required="true" id='un' name="username" placeholder="">
+                    <input type="text" class="form-control parsley-validated" data-required="true" id='un' name="uname" placeholder="">
                 </div>
                 <div class="form-group">
                     <label class="control-label">密码</label>
-                    <input type="password" class="form-control parsley-validated" data-required="true" id="pwd" name="password" placeholder="">
+                    <input type="password" class="form-control parsley-validated" data-required="true" id="pwd" name="upass" placeholder="">
                 </div>
                 <div class="form-group"><input type="hidden" name="secret" value="<?=$secret ?>"></div>                
                 <button type="submit" class="btn btn-primary">登录</button>
@@ -47,6 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </footer>
 <script src="/res/js/jquery/jquery.min.js"></script>
 <script src="/res/js/app.v2.js"></script>
+<script src="/res/js/base64.min.js"></script>
 <script src="/res/js/parsley/parsley.min.js" cache="false"></script>
 <script src="/res/js/parsley/parsley.extend.js" cache="false"></script>
 <script type="text/javascript">
@@ -71,6 +72,12 @@ if(Ie != -1){
     if(parseFloat(v[1].substring(0,2)) < 11){
         alert("浏览器版本过低，为了避免使用上的困扰，系统推荐使用Chrome, Firefox, IE11+, 或者浏览器切换到极速模式");
     }
+}
+
+function checkinput(){
+    var password = document.getElementById('pwd')
+    password.value = Base64.encode(password.value);
+    return true;
 }
 </script>
 </body>

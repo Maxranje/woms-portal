@@ -450,21 +450,29 @@ class Tmpmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if(!$sc) {
+				$query = "select count(*) from smstemplate where cid = ?";
+				$res = $this->db->query($query , array($_SESSION['cid']));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select * from smstemplate where cid = ? order by createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], $page, $rows));
 			} else {
+				$query = "select count(*) from smstemplate where cid = ? and content like ?";
+				$res = $this->db->query($query , array($_SESSION['cid'], '%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select * from smstemplate where cid = ? and content like ? order by createtime desc limit ?, ?";				
 				$res = $this->db->query($sql , array($_SESSION['cid'], '%'.$sc.'%', $page, $rows));				
 			}
 			$result = $res->result_array();
-			$total = $res->num_rows();
 			$this->data['rows'] = array();
 			foreach ($result as $row) {
 				$row['id'] = $row['smsid'];
 				$row['time'] = date('Y-m-d H:i:s', $row['createtime']);
 				$this->data['rows'][] = $row;
 			}
-			$this->data['total'] = $total;
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";

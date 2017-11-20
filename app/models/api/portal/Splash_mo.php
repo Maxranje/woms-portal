@@ -10,7 +10,6 @@ class Splash_mo extends CI_Model {
 	}
 
 	public function index (){
-		
 		$wlanacname 	= $this->input->get("wlanacname");
 		$wlanacip 		= $this->input->get("wlanacip");
 		$nasid 			= $this->input->get("nasid");
@@ -18,7 +17,6 @@ class Splash_mo extends CI_Model {
 		$clientip 		= $this->input->get("wlanuserip");
 		$clientmac 		= $this->input->get("usermac");
 		$url 			= urlencode ($this->input->get("userurl"));
-		#$wlanusername 	= $this->input->get("wlanusername");
 		$vlanid 		= $this->input->get("vlanid");
 		try{
 			if(!$clientip || !$wlanacname || !$wlanacip){
@@ -36,8 +34,7 @@ class Splash_mo extends CI_Model {
 			$ap = $res->row_array();
 			
 			# Check whether AP users exceed the standard
-			$query = "select uid from user where apid = ? and state = '1' and valid='1'";
-			$res = $this->db->query($query, array($ap['apid']));
+			$res = $this->db->query("select uid from user where apid = ? and state = '1'", array($ap['apid']));
 			if($ap['usecountgrant'] <= $res->num_rows()) {
 				throw new AppException ('接入点在线人数以达到上限');
 			}
@@ -65,17 +62,7 @@ class Splash_mo extends CI_Model {
 				$clientmac = strtoupper ($clientmac) ;
 			}
 
-			$_SESSION['url'] = $url;
-			// check mac white list
-			$query = "select * from whitelist where content = ? and (apid = ? or apid = 0) and type = 'm'";
-			$res = $this->db->query ($query, array( $clientmac , $ap['apid']));
-			if ($res && $res->num_rows() > 0){
-				$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'm', 0, $clientmac,'',time(), $clientip, $clientmac, $wanip);
-				$token = $this->func->addtoken ($uid, $ap['apid'], 'm', $clientip, $clientmac);
-				$optr = $this->func->getOptr($clientmac, "wl");
-				$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$clientmac."&upass=wl";
-				redirect($redirtoken, 'auto', 302);
-			}				
+			$_SESSION['url'] = $url;		
 
 			// check mac black list
 			$query = "select * from blacklist where content = ? and (apid = ? or apid = 0) and type = 'm'";
@@ -84,25 +71,6 @@ class Splash_mo extends CI_Model {
 				$result = $res->row_array();
 				if($result['validtime'] > time()){
 					throw new Exception("你的mac地址已被拉入黑名单, 请联系管理员开通");
-				}
-			}
-
-			// Determines whether to bind Mac and within the valid time
-			if($ap['bindmac'] == '1'){
-				$query = "select * from bindmac where apid = ? and mac = ? and valid = '1' ";
-				$res = $this->db->query ($query, array($ap['apid'], $clientmac));
-				if ($res->num_rows() > 0) {
-					$result = $res->row_array();
-					if($result['validatetime'] > time()){
-						$this->db->query ("update user set state = '1' and heartime=? where uid = ?", array(time(),$result['uid']));
-						$token = $this->func->addtoken ($result['uid'], $ap['apid'], 'm', $clientip, $clientmac);
-						$optr = $this->func->getOptr($clientmac, "bm");
-						$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$clientmac."&upass=bm";
-						redirect($redirtoken, 'auto', 302);						
-					} else {
-						$query = "update bindmac set state ='0' where apid = ? and mac = ?";
-						$this->db->query ($query, array($apid, $clientmac));
-					}
 				}
 			}
 
@@ -138,13 +106,13 @@ class Splash_mo extends CI_Model {
 				}
 				$wx = $res->row_array ();
 				
-				$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'w',0, $wx['openid'],'',time(), $clientip, $clientmac, $wanip);
+				$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'w',0, $wx['openid'],'',time(), $clientip, $clientmac, $wlanacip);
 				$token = $this->func->addtoken ($uid, $ap['apid'], 'w', $clientip, $clientmac);	
 
 				$_SESSION['loginable'] = 'login';
 				$_SESSION['wxlogin'] = '1';				
-				$optr = $this->func->getOptr($wx['openid'], "wx");
-				$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$wx['openid']."&upass=wx";			
+				$optr = $this->func->getOptr("weixin_user", "weixin_pass");
+				$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=weixin_user&upass=weixin_pass";			
 				redirect($redirtoken, 'auto', 302);
 
 			}
@@ -179,7 +147,7 @@ class Splash_mo extends CI_Model {
 			if ($acctype){ 
 				if($acctype == 'login'){ // noauth
 					# sysaccount auth
-					$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'n',0, 'auth_systemuser', 'auth_systempass',time(), $clientip, $clientmac, wanip);
+					$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'n',0, 'auth_systemuser', 'auth_systempass',time(), $clientip, $clientmac, $wlanacip);
 					$token = $this->func->addtoken ($uid, $ap['apid'], 'n', $clientip, $clientmac);
 					$optr = $this->func->getOptr('auth_systemuser', "auth_systempass");
 					$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=auth_systemuser&upass=auth_systempass";
@@ -193,32 +161,10 @@ class Splash_mo extends CI_Model {
 					if (!$authname || !$authpass){
 						throw new Exception ('用户名或密码输入错误, 请重新认证');
 					}
-					$query = "select * from authuser where uname = ? and upasswd =? and ( apid = ? or apid = 0 ) ";
-					$res = $this->db->query($query, array($authname, $authpass, $ap['apid']));
-					if(!$res || $res->num_rows () == 0){
-						throw new Exception ('用户名或密码输入错误, 请重新认证');
-					}
-					$authuser = $res->row_array ();		
-					if($authuser['state'] == "0"){
-						throw new Exception ('该账户处于无效状态，请使用其他帐号登录');
-					}
-					if($authuser['expiredate'] <= time()){
-						throw new Exception ('该账户已过有效期，请使用其他帐号登录');
-					}	
-					if($authuser['mutilogin'] == '1'){
-						$query = "select count(*) count from user where apid =? and uid = ? and state = '1' group by uid";
-						$res = $this->db->query ($query, array($ap['apid'], $authuser['id']));
-						$result = $res->row_array ();	
-						if(($result['count'] >= intval($authuser['mutilcount'])) ){
-							throw new Exception ('该账户多人登录以达到上限， 请重新更换账户登录');	
-						}
-					}
 
-					$this->db->trans_start();
-					$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'c', $authuser['id'], $authname, $authpass,time(), $clientip, $clientmac, $wanip);
+					$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'c', 0, $authname, $authpass,time(), $clientip, $clientmac, $wlanacip);
 					$token = $this->func->addtoken ($uid, $ap['apid'], 'c', $clientip, $clientmac);	
-					$this->db->trans_commit();
-					$optr = $this->func->getOptr('authname', "authpass");
+					$optr = $this->func->getOptr($authname, $authpass);
 					$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$authname."&upass=".$authpass;
 					redirect($redirtoken);	
 				}
@@ -239,10 +185,10 @@ class Splash_mo extends CI_Model {
 					if($smsauthlog['expiretime'] < time()) {
 						throw new Exception ('验证码过期');
 					}
-					$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 's',0, $authname,$authpass,time(), $clientip, $clientmac, wanip);
+					$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 's',0, $authname,$authpass,time(), $clientip, $clientmac, $wlanacip);
 					$token = $this->func->addtoken ($uid, $ap['apid'], 's', $clientip, $clientmac);	
-					$optr = $this->func->getOptr('authname', "authpass");
-					$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$authname."&upass=".$authpass;
+					$optr = $this->func->getOptr($authname, $authname);
+					$redirtoken = "/c/api/portal/auth?token=".$token."&url=".$url."&optr=".$optr."&uname=".$authname."&upass=".$authname;
 					redirect($redirtoken);							
 				}
 

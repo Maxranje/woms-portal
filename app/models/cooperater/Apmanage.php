@@ -157,14 +157,23 @@ class Apmanage extends CI_Model {
 			$rows = intval($rows);
 			$page = ($page - 1) * $rows;
 			if(!$sc) {
+				$sql = "select count(*) as total from ap a, apconfig ac where cid = ? and a.apid = ac.apid";	
+				$res = $this->db->query($sql, array($_SESSION['cid']));
+				$result = $res->row_array();
+				$total = $result['total'];
+
 				$sql = "select a.*, ac.* ,(select count(u.uid) from user u where u.apid = a.apid and u.state = '1'and u.valid='1') olcount, (select count(u.apid) from user u where u.apid = a.apid) allcount from ap a, apconfig ac where cid = ? and a.apid = ac.apid order by a.createtime desc limit ?, ?";
 				$res = $this->db->query($sql , array($_SESSION['cid'], $page, $rows));
 			} else {
+				$sql = "select count(*) as total from ap a, apconfig ac where cid = ? and a.apid = ac.apid and a.apname like ?";	
+				$res = $this->db->query($sql, array($_SESSION['cid'], '%'.$sc.'%'));
+				$result = $res->row_array();
+				$total = $result['total'];
+
 				$sql = "select a.*, ac.* ,(select count(u.uid) from user u where u.apid = a.apid and u.state = '1' and u.valid='1') olcount,(select count(u.apid) from user u where u.apid = a.apid) allcount from ap a, apconfig ac where cid = ? and a.apid = ac.apid and a.apname like ? order by a.createtime desc limit ?, ?";				
 				$res = $this->db->query($sql , array($_SESSION['cid'], '%'.$sc.'%', $page, $rows));				
 			}
 			$result = $res->result_array();
-			$total = $res->num_rows();
 			$this->data['rows'] = array();
 			foreach ($result as $row) {
 				$ap = array();
@@ -174,6 +183,9 @@ class Apmanage extends CI_Model {
 				$ap['usedcount'] = $row['allcount'];
 				$ap['ollist'] = $row['olcount'];
 				$ap['hearttime'] = ($row['hearttime'] == 0) ? '未同步' : date('Y-m-d H:i:s', $row['hearttime']);
+				if($row['protocol'] == "p"){
+					$ap['hearttime'] = date('Y-m-d H:i:s', $row['createtime']);
+				}
 				$ap['protocol'] = $row['protocol'] == 'w' ? 'WIFIDOG' : ($row['protocol'] == 'p' ? 'PORTAL2.0' :'PORTAL2.0 RC' );
 				if(time() - 180 > $row['hearttime']) {
 					$ap['state'] = "连接超时";

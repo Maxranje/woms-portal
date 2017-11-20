@@ -1,7 +1,0 @@
-ERROR - 2017-09-11 09:56:41 --> 404 Page Not Found: /index
-ERROR - 2017-09-11 14:16:45 --> 404 Page Not Found: Res/images
-ERROR - 2017-09-11 14:16:49 --> 404 Page Not Found: Faviconico/index
-ERROR - 2017-09-11 14:31:08 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 177
-ERROR - 2017-09-11 14:31:13 --> Severity: Notice --> Use of undefined constant wanip - assumed 'wanip' /Code/php/workspace/woms-portal/app/models/api/wifidog/Splash_mo.php 177
-ERROR - 2017-09-11 17:04:53 --> 404 Page Not Found: /index
-ERROR - 2017-09-11 17:04:53 --> 404 Page Not Found: Faviconico/index

@@ -50,9 +50,18 @@ class Sysmanage extends CI_Model {
 			$sc = $this->input->post('sc');
 
 			if($sc) {
+				$query = "select count(*) total from sysnotice where display = '1' and title like ?";
+				$res = $this->db->query($query , array('%'.$sc.'%'));
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select * from sysnotice where display = '1' and title like ? order by addtime limit ?, ? " ;
 				$res = $this->db->query($sql , array('%'.$sc.'%', $page, $rows));
 			} else {
+				$res = $this->db->query("select count(*) total from sysnotice where display = '1'");
+				$result = $res->row_array();
+				$this->data['total'] = $result['total'];
+
 				$sql = "select * from sysnotice where display = '1' order by addtime limit ?, ? " ;
 				$res = $this->db->query($sql , array($page, $rows));				
 			}
@@ -66,7 +75,6 @@ class Sysmanage extends CI_Model {
 				$array['createtime']	= date("Y-m-d", $row['addtime']);
 				$this->data['rows'][] = $array;
 			}
-			$this->data['total'] = $res->num_rows();
 		}
 		catch (Exception $ec) {
 			$this->data["state"] = "failed";

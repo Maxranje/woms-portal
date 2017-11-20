@@ -88,9 +88,17 @@ class Adc extends CI_Controller {
 		redirect("/adc/login", "login", 302);
 	}
 
+	public function licence (){
+		$this->load->model ('admin/corpmanage', "model");
+		$this->model->checklicence();			
+	}
+
 	public function check_adc_login_state () {
 		if(count($this->uri->segment_array()) > 2 ) {
 			show_404("arguments to manay");
+		}
+		if($this->uri->segment(2) === "licence") {
+			return ;
 		}
 		if(!isset($_SESSION['adcid']) || !isset($_SESSION['adcuser'])){
 			if($this->input->is_ajax_request()) {

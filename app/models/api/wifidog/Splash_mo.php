@@ -35,8 +35,7 @@ class Splash_mo extends CI_Model {
 				$ap = $res->row_array();
 				
 				# Check whether AP users exceed the standard
-				$query = "select uid from user where apid = ? and state = '1' and valid='1'";
-				$res = $this->db->query($query, array($ap['apid']));
+				$res = $this->db->query("select uid from user where apid = ? and state = '1' ", array($ap['apid']));
 				if($ap['usecountgrant'] <= $res->num_rows()) {
 					throw new AppException ('接入点在线人数以达到上限');
 				}
@@ -54,7 +53,7 @@ class Splash_mo extends CI_Model {
 					$a = explode(":", date('H:i', time()));
 					$now = mktime($a[0], $a[1], 0 ,0,0,0);	
 
-					if($start> $now || $now > $end){
+					if($start > $now || $now > $end){
 						$dd = date("H:i", $opentime[0]).":".date("H:i", $opentime[1]);
 						throw new Exception("认证系统尚未开启, 开启时间为:".$dd);
 					}
@@ -178,7 +177,7 @@ class Splash_mo extends CI_Model {
 				if ($acctype){ 
 					if($acctype == 'login'){ // noauth
 						# sysaccount auth
-						$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'n',0, 'auth_systemuser', 'auth_systempass',time(), $clientip, $clientmac, wanip);
+						$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 'n',0, 'auth_systemuser', 'auth_systempass',time(), $clientip, $clientmac, $wanip);
 						$token = $this->func->addtoken ($uid, $ap['apid'], 'n', $clientip, $clientmac);	
 						$_SESSION['loginable'] = 'login';
 
@@ -195,7 +194,6 @@ class Splash_mo extends CI_Model {
 						}
 						if($ap['authserver'] == 'l'){
 							list($state, $reson) = $this->func->ldap($authname, $authpass, $ap['cid']);
-							log_message('error', $state." -- ".$reson);
 							if ($state == "failed"){
 								throw new Exception($reson);
 							}
@@ -249,7 +247,7 @@ class Splash_mo extends CI_Model {
 						if($smsauthlog['expiretime'] < time()) {
 							throw new Exception ('验证码过期');
 						}
-						$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 's',0, $authname,$authpass,time(), $clientip, $clientmac, wanip);
+						$uid = $this->func->adduser ($ap['cid'], $ap['apid'], 's',0, $authname,$authpass,time(), $clientip, $clientmac, $wanip);
 						$token = $this->func->addtoken ($uid, $ap['apid'], 's', $clientip, $clientmac);	
 						$_SESSION['loginable'] = 'login';
 

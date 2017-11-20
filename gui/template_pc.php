@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en" class="app">
 <head>
+<title><?=$tmp['title']?></title>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--ie使用edge渲染模式-->
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
@@ -22,7 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta name="browsermode" content="application"><!-- UC应用模式 -->
 <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
 <meta name="msapplication-tap-highlight" content="no"><!-- windows phone 点击无高光 -->
-<title><?=$tmp['title']?></title>
 <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="stylesheet" href="/res/css/app.v2.css" type="text/css" />

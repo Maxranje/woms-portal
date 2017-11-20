@@ -14,7 +14,9 @@ include ('top.php');
 					if (empty($tmp)){
 						echo '<p class="h4 text-danger text-center">暂无模版</p>';
 					}else{
-						foreach ($tmp as $row) {
+						for ($i=0;$i<count($tmp);$i++) {
+							$row = $tmp[$i];
+							if(($i+1) % 4 == 0){ echo '<div class="row template_rows">'; }
 							$select = $row['id'] == $tid ? "checked='checked'" : "";
 							if($row['type'] == '1'){
 								$tp = (!isset($row['phone_bgpic']) || empty($row['phone_bgpic'])) ? "top.jpg" : $row['phone_bgpic'];
@@ -113,6 +115,7 @@ include ('top.php');
 								}	
 								echo '</div></div>'; 												
 							}	
+							if(($i+1) % 4 == 0){ echo '</div>'; }
 						}
 					}
 					?>

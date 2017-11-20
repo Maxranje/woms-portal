@@ -54,34 +54,46 @@ class Usermanage extends CI_Model {
 			}
 
 			$query = "select a.protocol,a.apname, u.*, ul.* from user u, usedlog ul, ap a where a.apid = u.apid and u.uid = ul.uid and u.cid = ?";
+			$sql = "select count(*) as total from user u, usedlog ul, ap a where a.apid = u.apid and u.uid = ul.uid and u.cid = ?";	
 			$array = array($_SESSION['cid']);
 			if($sc){
 				$array[] = '%'.$sc.'%';
 				$query .= " and u.uname like ?";
+				$sql .= " and u.uname like ?";
 			}
 			if($protocol && $protocol != "all"){
 				$array[] = $protocol;
 				$query .= " and a.protocol=?";
+				$sql .= " and a.protocol=?";
 			}
 			if($type && $type != "all"){
 				$array[] = $type;
 				$query .= " and u.acctype=?";
+				$sql .= " and u.acctype=?";
 			}
 			if($apid && $apid != "all"){
 				$array[] = $apid;
 				$query .= " and a.apid=?";
+				$sql .= " and a.apid=?";
 			}
 			if($state && $state != "all"){
 				$state = $state == "on" ? "1" : "0";
 				$array[] = $state;
 				$query .= " and state=?";
+				$sql .= " and state=?";
 			}
-			$query .= " order by a.createtime desc limit ?, ?";
+
+			
+			$res = $this->db->query($sql, array($array));
+			$result = $res->row_array();
+			$total = $result['total'];
+
+
+			$query .= " order by u.createtime desc limit ?, ?";
 			$array[] = $page;
 			$array[] = $rows;
 			$res = $this->db->query ($query, $array);
 			$result = $res->result_array();
-			$total = $res->num_rows();
 			$this->data['rows'] = array();
 			foreach ($result as $row) {
 				$ap = array();

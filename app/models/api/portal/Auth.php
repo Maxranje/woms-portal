@@ -17,7 +17,7 @@ class Auth extends CI_Model {
 		$uname	= $this->input->get('uname');
 		$upass	= $this->input->get('upass');
 		$url 	= urlencode($this->input->get['url']);
-
+		echo "<pre>";
 		try{
 			if(!$token || !$optr){
 				throw new AppException ('Portal auth without optr', "optr=".$optr);
@@ -47,7 +47,7 @@ class Auth extends CI_Model {
 			$ap = $res->row_array();
 
 			# connect bas device
-			$socket = $this->socket->createsocket("udp://{$ap['wanip']}:2000");
+			$socket = $this->socket->createsocket("udp://".$ap['wanip'].":2000");
 			$this->packet->init(0x02, $ap['modal'], $ap['key'], $tokeninfo['ip']);
 			
 			#看看有没有用
@@ -90,7 +90,7 @@ class Auth extends CI_Model {
 			#auth 
 			$authretry = 1;
 			do{
-				$requestpacket = $this->packet->createpacket(0x03, $username, $password);
+				$requestpacket = $this->packet->createpacket(0x03, $uname, $upass);
 				$responsepacket = $this->socket->interactpacket($requestpacket, $timeout);
 				if($responsepacket === false) {
 					$requestpacket = $this->packet->createpacket(0x05, "", "", 0x01);
@@ -113,6 +113,7 @@ class Auth extends CI_Model {
 						$authretry++;
 						break;
 					case 0x04:
+						echo $uname."---".$upass."<br>";
 						throw new AppException('远程通信auth请求失败', "errocode = 0x04");
 				}
 				
@@ -133,8 +134,9 @@ class Auth extends CI_Model {
 			$query = "update user set valid = '1' where uid = ? and apid = ?";
 			$this->db->query($query, array($tokeninfo['uid'], $tokeninfo['apid']));
 			
-			$redirect = "/c/api/portal/portal?apid=".$ap['id']."&url=".$url;
-			redirect($redirtoken, 'auto', 302);
+			$redirect = "/c/api/portal/portal?apid=".$ap['apid']."&url=".$url;
+
+			redirect($redirect, 'auto', 302);
 
 		}catch(AppException $aex){
 			$aex->log_message ();

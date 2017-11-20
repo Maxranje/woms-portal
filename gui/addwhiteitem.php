@@ -28,7 +28,7 @@ include ('top.php');
 							<label class="col-sm-2 control-label"><a class="text-danger m-r-sm">*</a>所属接入点</label>
 							<div class="col-sm-5">
 								<select name="ap" class="form-control text-mt">
-									<option value="0">所有接入点</option>
+									<option value="0">WIFIDOG协议接入点 </option>
 									<?php
 									foreach ($ap as $row) {
 										echo "<option value='".$row['apid']."'>".$row['apname']."</option>";
